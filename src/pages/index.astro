@@ -1,17 +1,64 @@
 ---
+import { type CollectionEntry, getCollection } from "astro:content";
+import BaseLayout from "../layouts/base-layout.astro";
+import "./index.css";
 
+const allRecipes = await getCollection("recipes");
+
+const groupedRecipes = allRecipes.reduce(
+  (acc: Record<string, CollectionEntry<"recipes">[]>, recipe) => {
+    const category = recipe.id.includes("/")
+      ? recipe.id.split("/")[0]
+      : UNCATEGORIZED;
+
+    if (!acc[category]) {
+      acc[category] = [];
+    }
+    acc[category].push(recipe);
+    return acc;
+  },
+  {},
+);
+
+const categories = Object.keys(groupedRecipes).sort();
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Full House - Cookbook">
+  <div class="container">
+    <div class="hero-section">
+      <h1 class="hero-title">🏠 Can you smell what the rock is cooking?</h1>
+      <img
+        src="https://cookbook.hau5.pro/default.png"
+        alt="full house"
+        class="hero-image"
+      />
+    </div>
+
+    {
+      categories.map((category) => (
+        <section class="category-section">
+          <h2 class="category-header">{category}</h2>
+          <ul class="recipe-grid">
+            {groupedRecipes[category].map((recipe) => (
+              <li>
+                <a href={`/recipes/${recipe.id}`} class="recipe-card-link">
+                  <article class="recipe-card">
+                    <h3 class="recipe-card-title">{recipe.data.title}</h3>
+                    <div class="recipe-card-meta">
+                      <span class="meta-item">
+                        Prep: {recipe.data.prepTime}
+                      </span>
+                      <span class="meta-item">
+                        Cook: {recipe.data.cookTime}
+                      </span>
+                    </div>
+                  </article>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))
+    }
+  </div>
+</BaseLayout>

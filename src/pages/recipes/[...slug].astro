@@ -1,0 +1,64 @@
+---
+import { getCollection, render } from "astro:content";
+import { CDN_BASE } from "../../config";
+import BaseLayout from "../../layouts/base-layout.astro";
+import "../../styles/recipe.css"; // Import your new separate CSS file
+
+export async function getStaticPaths() {
+  const posts = await getCollection("recipes");
+  return posts.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const imageUrl = `${CDN_BASE}/${entry.data.image}`;
+const { Content } = await render(entry);
+
+const category = entry.id.includes("/")
+  ? entry.id.split("/")[0]
+  : "Uncategorized";
+---
+
+<BaseLayout title={`${entry.data.title} | Full House`}>
+  <div class="container-narrow">
+    <nav class="breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <span class="cat-tag">{category}</span>
+    </nav>
+
+    <header class="recipe-header">
+      <h1>{entry.data.title}</h1>
+      <div class="recipe-meta">
+        {
+          entry.data.prepTime && (
+            <div class="recipe-meta-item">
+              <span class="meta-label">Prep Time</span>
+              <span class="meta-value">{entry.data.prepTime}</span>
+            </div>
+          )
+        }
+        {
+          entry.data.cookTime && (
+            <div class="recipe-meta-item">
+              <span class="meta-label">Cook Time</span>
+              <span class="meta-value">{entry.data.cookTime}</span>
+            </div>
+          )
+        }
+      </div>
+    </header>
+
+    {
+      entry.data.image && (
+        <img src={imageUrl} alt={entry.data.title} class="recipe-img" />
+      )
+    }
+
+    <article class="prose">
+      <Content />
+    </article>
+  </div>
+</BaseLayout>
