@@ -41,6 +41,7 @@
   gap: var(--space-lg);
   font-family: 'JetBrains Mono', monospace;
   font-size: var(--text-sm);
+  margin-bottom: var(--space-lg);
 }
 
 .recipe-meta-item {

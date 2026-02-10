@@ -1,43 +1,63 @@
-# Astro Starter Kit: Minimal
+# Full House
 
-```sh
-npm create astro@latest -- --template minimal
+A personal cookbook built with [Astro](https://astro.build). Recipes are written in Markdown and organized by category.
+
+## Project Structure
+
+```
+src/
+  config.ts              # CDN and site configuration
+  content/
+    recipes/             # Markdown recipe files, grouped by category
+      basics/
+        boiled-eggs.md
+  layouts/
+    base-layout.astro    # Shared page layout
+  pages/
+    index.astro          # Homepage — lists all recipes by category
+    recipes/
+      [...slug].astro    # Individual recipe page
+  styles/
+    global.css           # Design tokens and base styles
+    recipe.css           # Recipe page styles
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Adding a Recipe
 
-## 🚀 Project Structure
+Create a new `.md` file under `src/content/recipes/<category>/`:
 
-Inside of your Astro project, you'll see the following folders and files:
+```md
+---
+title: "Recipe Name"
+description: "A short description of the dish."
+image: "filename.webp"
+prepTime: "10 min"
+cookTime: "30 min"
+tags: ["tag1", "tag2"]
+---
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+## Ingredients
+
+- Item one
+- Item two
+
+## Directions
+
+1. Step one
+2. Step two
+
+## Notes
+
+- Optional tips
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Images are served from the CDN configured in `src/config.ts`.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Commands
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| Command          | Action                                  |
+| :--------------- | :-------------------------------------- |
+| `npm install`    | Install dependencies                    |
+| `npm run dev`    | Start dev server at `localhost:4321`    |
+| `npm run build`  | Build production site to `./dist/`      |
+| `npm run preview`| Preview the build locally               |
