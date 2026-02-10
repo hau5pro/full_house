@@ -2,6 +2,8 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import BaseLayout from "../layouts/base-layout.astro";
 import "./index.css";
+import { CDN_BASE } from "../config";
+import { UNCATEGORIZED } from "./constants";
 
 const allRecipes = await getCollection("recipes");
 
@@ -27,11 +29,7 @@ const categories = Object.keys(groupedRecipes).sort();
   <div class="container">
     <div class="hero-section">
       <h1 class="hero-title">🏠 Can you smell what the rock is cooking?</h1>
-      <img
-        src="https://cookbook.hau5.pro/default.png"
-        alt="full house"
-        class="hero-image"
-      />
+      <img src={`${CDN_BASE}/default.png`} alt="full house" class="hero-image" />
     </div>
 
     {
@@ -43,14 +41,32 @@ const categories = Object.keys(groupedRecipes).sort();
               <li>
                 <a href={`/recipes/${recipe.id}`} class="recipe-card-link">
                   <article class="recipe-card">
-                    <h3 class="recipe-card-title">{recipe.data.title}</h3>
-                    <div class="recipe-card-meta">
-                      <span class="meta-item">
-                        Prep: {recipe.data.prepTime}
-                      </span>
-                      <span class="meta-item">
-                        Cook: {recipe.data.cookTime}
-                      </span>
+                    {recipe.data.image && (
+                      <img
+                        src={`${CDN_BASE}/${recipe.data.image}`}
+                        alt={recipe.data.title}
+                        class="recipe-card-image"
+                      />
+                    )}
+                    <div class="recipe-card-content">
+                      <h3 class="recipe-card-title">{recipe.data.title}</h3>
+                      {recipe.data.description && (
+                        <p class="recipe-card-description">{recipe.data.description}</p>
+                      )}
+                      {(recipe.data.prepTime || recipe.data.cookTime) && (
+                        <div class="recipe-card-meta">
+                          {recipe.data.prepTime && (
+                            <span class="meta-item">
+                              Prep: {recipe.data.prepTime}
+                            </span>
+                          )}
+                          {recipe.data.cookTime && (
+                            <span class="meta-item">
+                              Cook: {recipe.data.cookTime}
+                            </span>
+                          )}
+                        </div>
+                      )}
                     </div>
                   </article>
                 </a>

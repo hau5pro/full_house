@@ -5,22 +5,9 @@
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  margin-bottom: var(--space-2xl);
   font-size: var(--text-sm);
   color: var(--text-muted);
-  padding: var(--space-md);
-  background: var(--bg-alt);
-  border-radius: var(--border-radius-sm);
-  border: 1px solid var(--border);
-}
-
-.breadcrumb a {
-  color: var(--accent);
-  transition: opacity var(--transition-fast);
-}
-
-.breadcrumb a:hover {
-  opacity: 0.7;
+  margin-bottom: var(--space-3xl);
 }
 
 .cat-tag {
@@ -28,27 +15,24 @@
   color: var(--accent);
   font-weight: 600;
   font-size: var(--text-xs);
-  background: rgba(123, 94, 234, 0.1);
-  padding: var(--space-xs) var(--space-sm);
-  border-radius: var(--border-radius-sm);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-sm);
+  display: inline-block;
 }
 
 /* =========================
    RECIPE HEADER
    ========================= */
 .recipe-header {
-  margin-bottom: var(--space-2xl);
-  padding-bottom: var(--space-xl);
-  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--space-md);
 }
 
 .recipe-header h1 {
   font-size: var(--text-4xl);
   font-weight: 700;
   color: var(--text);
-  margin-bottom: var(--space-lg);
-  line-height: 1.2;
+  margin-bottom: var(--space-md);
+  line-height: 1.3;
 }
 
 .recipe-meta {
@@ -62,12 +46,12 @@
 .recipe-meta-item {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xs);
-  padding: var(--space-md);
+  gap: var(--space-sm);
+  padding: var(--space-lg);
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: var(--border-radius-sm);
-  min-width: 140px;
+  min-width: 160px;
 }
 
 .meta-label {
@@ -92,16 +76,12 @@
   object-fit: cover;
   border-radius: var(--border-radius-lg);
   border: 1px solid var(--border);
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-3xl);
   box-shadow: var(--shadow-lg);
   filter: brightness(0.9);
   transition: all var(--transition-slow);
 }
 
-.recipe-img:hover {
-  filter: brightness(1);
-  box-shadow: var(--shadow-glow);
-}
 
 /* =========================
    RECIPE CONTENT (PROSE)
@@ -112,20 +92,20 @@
   color: var(--text);
 }
 
-.prose :global(h2) {
+.prose h2 {
   font-size: var(--text-2xl);
   font-weight: 600;
   color: var(--accent);
-  margin-top: var(--space-2xl);
-  margin-bottom: var(--space-lg);
-  padding-bottom: var(--space-sm);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-md);
   border-bottom: 2px solid var(--border);
   display: flex;
   align-items: center;
   gap: var(--space-sm);
 }
 
-.prose :global(h2::before) {
+.prose h2::before {
   content: '';
   width: 4px;
   height: 24px;
@@ -133,47 +113,43 @@
   border-radius: 2px;
 }
 
-.prose :global(h3) {
+.prose h2:first-of-type {
+  margin-top: 0;
+}
+
+.prose h3 {
   font-size: var(--text-xl);
   font-weight: 600;
   color: var(--text);
-  margin-top: var(--space-xl);
-  margin-bottom: var(--space-md);
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-lg);
 }
 
-.prose :global(p) {
-  margin-bottom: var(--space-lg);
+.prose p {
+  margin-bottom: var(--space-xl);
   color: var(--text);
+  line-height: 1.9;
 }
 
 /* =========================
    LISTS - INGREDIENTS & STEPS
    ========================= */
-.prose :global(ul) {
+.prose ul {
   list-style: none;
   padding: 0;
   margin-bottom: var(--space-xl);
   display: grid;
-  gap: var(--space-sm);
+  gap: 0;
 }
 
-.prose :global(li) {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: var(--border-radius-sm);
-  padding: var(--space-md);
+.prose li {
+  padding: var(--space-xs) 0;
   display: flex;
   align-items: flex-start;
   gap: var(--space-md);
-  transition: all var(--transition-fast);
 }
 
-.prose :global(li:hover) {
-  border-color: var(--accent-muted);
-  background: rgba(36, 36, 36, 0.8);
-}
-
-.prose :global(li::before) {
+.prose li::before {
   content: "−";
   color: var(--accent);
   font-weight: bold;
@@ -183,20 +159,20 @@
   text-align: center;
 }
 
-.prose :global(ol) {
+.prose ol {
   counter-reset: recipe-counter;
   list-style: none;
   padding: 0;
   margin-bottom: var(--space-xl);
   display: grid;
-  gap: var(--space-md);
+  gap: var(--space-xs);
 }
 
-.prose :global(ol li) {
+.prose ol li {
   counter-increment: recipe-counter;
 }
 
-.prose :global(ol li::before) {
+.prose ol li::before {
   content: counter(recipe-counter);
   color: var(--text);
   background: var(--accent);
@@ -211,17 +187,17 @@
   flex-shrink: 0;
 }
 
-.prose :global(strong) {
+.prose strong {
   color: var(--accent);
   font-weight: 600;
 }
 
-.prose :global(em) {
+.prose em {
   color: var(--text-muted);
   font-style: italic;
 }
 
-.prose :global(code) {
+.prose code {
   background: var(--code-bg);
   color: var(--accent);
   padding: 0.2em 0.4em;

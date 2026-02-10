@@ -1,1 +1,1 @@
-const UNCATEGORIZED = "Uncatagorized";
+export const UNCATEGORIZED = "Uncatagorized";
