@@ -1,0 +1,6 @@
+- Script to pull cdn images from bucket
+- Script to push cdn images to bucket
+- Image optimization for web script
+- Add content
+- Category Navigation
+- Search
