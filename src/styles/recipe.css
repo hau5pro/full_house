@@ -16,7 +16,7 @@
   font-weight: 600;
   font-size: var(--text-xs);
   letter-spacing: 0.08em;
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
   display: inline-block;
 }
 
@@ -31,7 +31,7 @@
   font-size: var(--text-4xl);
   font-weight: 700;
   color: var(--text);
-  margin-bottom: var(--space-md);
+  margin-bottom: 0;
   line-height: 1.3;
 }
 

@@ -7,13 +7,15 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "r2": "bash scripts/r2-media.sh"
+    "r2": "bash scripts/r2-media.sh",
+    "optimize": "tsx scripts/optimize-images.ts"
   },
   "dependencies": {
     "astro": "^5.17.1"
   },
   "devDependencies": {
     "@types/node": "^25.2.3",
+    "sharp": "^0.34.5",
     "tsx": "^4.21.0",
     "wrangler": "^4.64.0"
   }

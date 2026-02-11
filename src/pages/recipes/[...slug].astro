@@ -24,8 +24,8 @@ const category = entry.id.includes("/")
 <BaseLayout title={`${entry.data.title} | Full House`}>
   <div class="container-narrow">
     <header class="recipe-header">
-      <span class="cat-tag">{category}</span>
       <h1>{entry.data.title}</h1>
+      <span class="cat-tag">{category}</span>
       <div class="recipe-meta">
         {
           entry.data.prepTime && (

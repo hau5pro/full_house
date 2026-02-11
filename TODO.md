@@ -1,4 +1,3 @@
-- Image optimization for web script
 - Add content
 - Category Navigation
 - Search
