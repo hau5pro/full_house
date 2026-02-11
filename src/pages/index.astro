@@ -3,7 +3,7 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import BaseLayout from "../layouts/base-layout.astro";
 import "./index.css";
 import { CDN_BASE } from "../config";
-import { UNCATEGORIZED } from "./constants";
+import { UNCATEGORIZED } from "../infrastructure/constants";
 
 const allRecipes = await getCollection("recipes");
 
@@ -29,7 +29,11 @@ const categories = Object.keys(groupedRecipes).sort();
   <div class="container">
     <div class="hero-section">
       <h1 class="hero-title">🏠 Can you smell what the rock is cooking?</h1>
-      <img src={`${CDN_BASE}/default.png`} alt="full house" class="hero-image" />
+      <img
+        src={`${CDN_BASE}/default.png`}
+        alt="full house"
+        class="hero-image"
+      />
     </div>
 
     {
@@ -51,7 +55,9 @@ const categories = Object.keys(groupedRecipes).sort();
                     <div class="recipe-card-content">
                       <h3 class="recipe-card-title">{recipe.data.title}</h3>
                       {recipe.data.description && (
-                        <p class="recipe-card-description">{recipe.data.description}</p>
+                        <p class="recipe-card-description">
+                          {recipe.data.description}
+                        </p>
                       )}
                       {(recipe.data.prepTime || recipe.data.cookTime) && (
                         <div class="recipe-card-meta">
