@@ -46,6 +46,14 @@ const category = entry.id.includes("/")
       }
       <div class="recipe-meta">
         {
+          entry.data.servings && (
+            <div class="recipe-meta-item">
+              <span class="meta-label">Servings</span>
+              <span class="meta-value">{entry.data.servings}</span>
+            </div>
+          )
+        }
+        {
           entry.data.prepTime && (
             <div class="recipe-meta-item">
               <span class="meta-label">Prep Time</span>
@@ -72,5 +80,37 @@ const category = entry.id.includes("/")
     <article class="prose">
       <Content />
     </article>
+
+    {
+      entry.data.nutrition && (
+        <div class="nutrition-card">
+          <div class="nutrition-header">Nutrition Facts</div>
+          <div class="nutrition-row nutrition-serving">
+            <span>Serving size</span>
+            <span class="nutrition-serving-value">{entry.data.nutrition.servingSize}</span>
+          </div>
+          <div class="nutrition-divider-thick" />
+          <div class="nutrition-row nutrition-calories">
+            <span>Calories</span>
+            <span class="calories-value">{entry.data.nutrition.calories}</span>
+          </div>
+          <div class="nutrition-divider" />
+          <div class="nutrition-row">
+            <span>Total Fat</span>
+            <span>{entry.data.nutrition.fat}</span>
+          </div>
+          <div class="nutrition-divider" />
+          <div class="nutrition-row">
+            <span>Total Carbs</span>
+            <span>{entry.data.nutrition.carbs}</span>
+          </div>
+          <div class="nutrition-divider" />
+          <div class="nutrition-row">
+            <span>Protein</span>
+            <span>{entry.data.nutrition.protein}</span>
+          </div>
+        </div>
+      )
+    }
   </div>
 </BaseLayout>

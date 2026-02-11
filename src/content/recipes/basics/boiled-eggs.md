@@ -4,6 +4,13 @@ description: "The simplest recipe every cook should master. Perfect soft or hard
 image: "opt-boiled_eggs.webp"
 prepTime: "5 min"
 cookTime: "4-10 min"
+servings: "1"
+nutrition:
+  servingSize: "1 large egg (53 g)"
+  calories: 70
+  protein: "6g"
+  carbs: "1g"
+  fat: "5g"
 tags: ["egg"]
 ---
 

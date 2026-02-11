@@ -11,6 +11,14 @@ const recipes = defineCollection({
     tags: z.array(z.string()).default([]),
     prepTime: z.string().optional(),
     cookTime: z.string().optional(),
+    servings: z.string().optional(),
+    nutrition: z.object({
+      servingSize: z.string(),
+      calories: z.number(),
+      protein: z.string(),
+      carbs: z.string(),
+      fat: z.string(),
+    }).optional(),
   }),
 });
 

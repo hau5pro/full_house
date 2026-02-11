@@ -113,6 +113,72 @@
   font-size: var(--text-base);
 }
 
+.nutrition-card {
+  border: 2px solid var(--text);
+  border-radius: var(--border-radius-sm);
+  padding: var(--space-md) var(--space-lg);
+  max-width: 360px;
+  font-family: 'Inter', sans-serif;
+  margin-top: var(--space-3xl);
+}
+
+.nutrition-header {
+  font-size: var(--text-3xl);
+  font-weight: 900;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  padding-bottom: var(--space-xs);
+}
+
+.nutrition-serving {
+  font-size: var(--text-sm);
+  padding-bottom: var(--space-sm);
+}
+
+.nutrition-serving-value {
+  color: var(--accent-warm);
+  font-weight: 600;
+}
+
+.nutrition-divider-thick {
+  height: 8px;
+  background: var(--text);
+  margin: var(--space-sm) 0;
+}
+
+.nutrition-divider {
+  height: 1px;
+  background: var(--border);
+  margin: var(--space-sm) 0;
+}
+
+.nutrition-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-base);
+  color: var(--text);
+  padding: var(--space-xs) 0;
+}
+
+.nutrition-row span:first-child {
+  font-weight: 600;
+}
+
+.nutrition-row span:last-child {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--accent-warm);
+}
+
+.nutrition-calories {
+  font-size: var(--text-xl);
+  font-weight: 700;
+}
+
+.calories-value {
+  font-size: var(--text-2xl);
+}
+
 /* =========================
    RECIPE IMAGE
    ========================= */
