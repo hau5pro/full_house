@@ -2,7 +2,7 @@
 import { getCollection, render } from "astro:content";
 import { CDN_BASE } from "../../config";
 import BaseLayout from "../../layouts/base-layout.astro";
-import "../../styles/recipe.css"; // Import your new separate CSS file
+import "../../styles/recipe.css";
 
 export async function getStaticPaths() {
   const posts = await getCollection("recipes");
@@ -21,11 +21,29 @@ const category = entry.id.includes("/")
   : "Uncategorized";
 ---
 
-<BaseLayout title={`${entry.data.title} | Full House`}>
+<BaseLayout title={`${entry.data.title} | Full House`} description={entry.data.description}>
   <div class="container-narrow">
+    <nav class="breadcrumb">
+      <a href="/">Recipes</a>
+      <span>/</span>
+      <span style="text-transform: capitalize;">{category}</span>
+    </nav>
     <header class="recipe-header">
       <h1>{entry.data.title}</h1>
-      <span class="cat-tag">{category}</span>
+      {
+        entry.data.description && (
+          <p class="recipe-description">{entry.data.description}</p>
+        )
+      }
+      {
+        entry.data.tags && entry.data.tags.length > 0 && (
+          <div class="recipe-tags">
+            {entry.data.tags.map((tag: string) => (
+              <span class="tag-chip">#{tag}</span>
+            ))}
+          </div>
+        )
+      }
       <div class="recipe-meta">
         {
           entry.data.prepTime && (

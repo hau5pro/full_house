@@ -7,7 +7,16 @@
   gap: var(--space-sm);
   font-size: var(--text-sm);
   color: var(--text-muted);
-  margin-bottom: var(--space-3xl);
+  margin-bottom: var(--space-sm);
+}
+
+.breadcrumb a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--accent);
 }
 
 .cat-tag {
@@ -16,7 +25,7 @@
   font-weight: 600;
   font-size: var(--text-xs);
   letter-spacing: 0.08em;
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
   display: inline-block;
 }
 
@@ -24,15 +33,51 @@
    RECIPE HEADER
    ========================= */
 .recipe-header {
-  margin-bottom: var(--space-md);
+  margin-bottom: 0;
 }
 
 .recipe-header h1 {
   font-size: var(--text-4xl);
   font-weight: 700;
-  color: var(--text);
-  margin-bottom: 0;
+  color: var(--accent);
+  margin-bottom: var(--space-sm);
   line-height: 1.3;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.recipe-header h1::before {
+  content: '';
+  width: 6px;
+  height: 32px;
+  background: var(--accent);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.recipe-description {
+  color: var(--text-muted);
+  font-size: var(--text-lg);
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+}
+
+.recipe-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.tag-chip {
+  font-size: var(--text-xs);
+  color: var(--accent-warm);
+  background: var(--card-bg);
+  border: 1px solid var(--accent-warm-muted);
+  border-radius: var(--border-radius-sm);
+  padding: 0.15em 0.6em;
+  letter-spacing: 0.03em;
 }
 
 .recipe-meta {
@@ -63,7 +108,7 @@
 }
 
 .meta-value {
-  color: var(--accent);
+  color: var(--accent-warm);
   font-weight: 600;
   font-size: var(--text-base);
 }
@@ -74,13 +119,8 @@
 .recipe-img {
   width: 100%;
   max-height: 500px;
-  object-fit: cover;
-  border-radius: var(--border-radius-lg);
-  border: 1px solid var(--border);
-  margin-bottom: var(--space-3xl);
-  box-shadow: var(--shadow-lg);
-  filter: brightness(0.9);
-  transition: all var(--transition-slow);
+  object-fit: contain;
+  margin-bottom: var(--space-xl);
 }
 
 
@@ -98,7 +138,7 @@
   font-weight: 600;
   color: var(--accent);
   margin-top: var(--space-xl);
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-md);
   padding-bottom: var(--space-md);
   border-bottom: 2px solid var(--border);
   display: flex;
@@ -151,7 +191,7 @@
 }
 
 .prose li::before {
-  content: "−";
+  content: "\2212";
   color: var(--accent);
   font-weight: bold;
   font-size: var(--text-lg);
@@ -175,17 +215,18 @@
 
 .prose ol li::before {
   content: counter(recipe-counter);
-  color: var(--text);
-  background: var(--accent);
+  color: var(--bg);
+  background: var(--accent-warm);
   font-weight: 700;
-  font-size: var(--text-sm);
-  width: 32px;
-  height: 32px;
+  font-size: var(--text-xs);
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  margin-top: 3px;
 }
 
 .prose strong {
