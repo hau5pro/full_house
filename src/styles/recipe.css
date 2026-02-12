@@ -229,9 +229,8 @@
 
 .prose li {
   padding: var(--space-xs) 0;
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-md);
+  padding-left: calc(20px + var(--space-md));
+  position: relative;
 }
 
 .prose li::before {
@@ -239,7 +238,8 @@
   color: var(--accent);
   font-weight: bold;
   font-size: var(--text-lg);
-  flex-shrink: 0;
+  position: absolute;
+  left: 0;
   width: 20px;
   text-align: center;
 }
@@ -281,6 +281,11 @@
 .prose em {
   color: var(--text-muted);
   font-style: italic;
+}
+
+.prose ul em {
+  color: var(--accent-warm);
+  font-style: normal;
 }
 
 .prose code {

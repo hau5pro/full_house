@@ -1,8 +1,8 @@
 ---
 title: "Recipe Name"
-description: "A one-sentence hook about why this dish is great."
-image: "https://your-cdn-link.com/image.jpg"
-tags: ["easy", "favorite"]
+description: ""
+image: "opt-default.webp"
+tags: ["easy"]
 meta:
   prepTime: "15 mins"
   cookTime: "30 mins"
@@ -11,9 +11,9 @@ meta:
 
 ## Ingredients
 
-- [ ] Ingredient 1
-- [ ] Ingredient 2
-- [ ] Ingredient 3
+- 1 cup *ingredient one*
+- 2 tbsp *ingredient two*
+- 1/2 tsp *ingredient three*
 
 ## Directions
 

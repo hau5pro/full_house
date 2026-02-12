@@ -17,8 +17,8 @@ tags: ["egg"]
 
 ## Ingredients
 
-- Eggs
-- 1 teaspoon salt (optional)
+- 1 *egg*
+- 1 tsp *salt* (optional)
 
 ## Directions
 

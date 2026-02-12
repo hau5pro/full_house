@@ -10,7 +10,8 @@ push() {
     files=("$MEDIA_DIR"/*)
   fi
 
-  local count=0
+  local pushed=0
+  local skipped=0
   for f in "${files[@]}"; do
     [[ -f "$f" ]] || continue
     ext="${f##*.}"
@@ -18,12 +19,19 @@ push() {
       jpg|jpeg|png|gif|webp|svg|avif) ;;
       *) continue ;;
     esac
-    echo "  uploading $(basename "$f")..."
-    rclone copyto "$f" "$REMOTE/$(basename "$f")"
-    count=$((count + 1))
+    local name
+    name="$(basename "$f")"
+    if rclone check "$f" "$REMOTE" --one-way --checksum 2>/dev/null; then
+      echo "  skipping $name (unchanged)"
+      skipped=$((skipped + 1))
+    else
+      echo "  uploading $name..."
+      rclone copyto "$f" "$REMOTE/$name"
+      pushed=$((pushed + 1))
+    fi
   done
 
-  echo "Pushed $count file(s)"
+  echo "Pushed $pushed file(s), skipped $skipped unchanged"
 }
 
 pull() {

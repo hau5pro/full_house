@@ -24,36 +24,7 @@ src/
 
 ## Adding a Recipe
 
-Create a new `.md` file under `src/content/recipes/<category>/`:
-
-```md
----
-title: "Recipe Name"
-description: "A short description of the dish."
-image: "filename.webp"
-tags: ["tag1", "tag2"]
-meta:
-  prepTime: "10 min"
-  cookTime: "30 min"
-  servings: "4"
----
-
-## Ingredients
-
-- Item one
-- Item two
-
-## Directions
-
-1. Step one
-2. Step two
-
-## Notes
-
-- Optional tips
-```
-
-Images are served from the CDN configured in `src/config.ts`.
+Copy `src/content/template.md` into `src/content/recipes/<category>/` and fill it in. Images are served from the CDN configured in `src/config.ts`.
 
 ## Images & CDN
 
@@ -65,7 +36,7 @@ Recipe images are stored in Cloudflare R2 and served via CDN. The local working 
 npm run optimize
 ```
 
-This converts any `.png`, `.jpg`, `.jpeg`, or `.gif` files in `scripts/media/` to WebP (quality 80, max 1280px wide) with an `opt-` prefix, then removes the originals. Reference the optimized filename in recipe frontmatter (e.g., `image: "opt-default.webp"`).
+This converts any `.png`, `.jpg`, `.jpeg`, `.webp` or `.gif` files in `scripts/media/` to WebP (quality 80, max 1280px wide) with an `opt-` prefix, then removes the originals. Reference the optimized filename in recipe frontmatter (e.g., `image: "opt-default.webp"`).
 
 **Syncing with R2:**
 
@@ -83,11 +54,11 @@ Requires [rclone](https://rclone.org/) configured with a remote named `r2` point
 
 ## Commands
 
-| Command            | Action                                  |
-| :----------------- | :-------------------------------------- |
-| `npm install`      | Install dependencies                    |
-| `npm run dev`      | Start dev server at `localhost:4321`    |
-| `npm run build`    | Build production site to `./dist/`      |
-| `npm run preview`  | Preview the build locally               |
-| `npm run optimize` | Optimize images in `scripts/media/`     |
-| `npm run r2`       | Sync images with Cloudflare R2          |
+| Command            | Action                               |
+| :----------------- | :----------------------------------- |
+| `npm install`      | Install dependencies                 |
+| `npm run dev`      | Start dev server at `localhost:4321` |
+| `npm run build`    | Build production site to `./dist/`   |
+| `npm run preview`  | Preview the build locally            |
+| `npm run optimize` | Optimize images in `scripts/media/`  |
+| `npm run r2`       | Sync images with Cloudflare R2       |
