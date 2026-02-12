@@ -6,7 +6,12 @@ tags: ["dip", "mexican", "avacado"]
 meta:
   prepTime: "15 mins"
   cookTime: "30 mins"
-  servings: "4"
+  servings: "6"
+nutrition:
+  calories: 217
+  protein: "3g"
+  carbs: "10g"
+  fat: "17g"
 ---
 
 ## Ingredients

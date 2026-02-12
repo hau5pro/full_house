@@ -9,18 +9,22 @@ const recipes = defineCollection({
     description: z.string().optional(),
     image: z.string(),
     tags: z.array(z.string()).default([]),
-    meta: z.object({
-      prepTime: z.string().optional(),
-      cookTime: z.string().optional(),
-      servings: z.string().optional(),
-    }).optional(),
-    nutrition: z.object({
-      servingSize: z.string(),
-      calories: z.number(),
-      protein: z.string(),
-      carbs: z.string(),
-      fat: z.string(),
-    }).optional(),
+    meta: z
+      .object({
+        prepTime: z.string().optional(),
+        cookTime: z.string().optional(),
+        servings: z.string().optional(),
+      })
+      .optional(),
+    nutrition: z
+      .object({
+        servingSize: z.string().optional(),
+        calories: z.number().optional(),
+        protein: z.string().optional(),
+        carbs: z.string().optional(),
+        fat: z.string().optional(),
+      })
+      .optional(),
   }),
 });
 
