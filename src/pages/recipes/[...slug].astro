@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
 import { CDN_BASE } from "../../config";
+import { UNCATEGORIZED } from "../../infrastructure/constants";
 import BaseLayout from "../../layouts/base-layout.astro";
 import TagChips from "../../components/TagChips.astro";
 import "../../styles/recipe.css";
@@ -19,7 +20,7 @@ const { Content } = await render(entry);
 
 const category = entry.id.includes("/")
   ? entry.id.split("/")[0]
-  : "Uncategorized";
+  : UNCATEGORIZED;
 ---
 
 <BaseLayout title={`${entry.data.title} | Full House`} description={entry.data.description}>
@@ -27,7 +28,7 @@ const category = entry.id.includes("/")
     <nav class="breadcrumb">
       <a href="/">Recipes</a>
       <span>/</span>
-      <span style="text-transform: capitalize;">{category}</span>
+      <span class="breadcrumb-category">{category}</span>
     </nav>
     <header class="recipe-header">
       <h1>{entry.data.title}</h1>

@@ -19,21 +19,6 @@ import BaseLayout from "../layouts/base-layout.astro";
       </p>
     </section>
 
-    <section class="about-section">
-      <h2>Why This Exists</h2>
-      <p>
-        Public recipe websites have become nearly unusable. You want to know how
-        to make lasagna, but first you have to read 2,000 words about someone's
-        childhood memories, survive an onslaught of ads, dismiss three
-        newsletter popups, and scroll past twenty photos of the same dish from
-        slightly different angles.
-      </p>
-      <p>
-        Full House is the antidote. It's a personal recipe book designed for
-        sharing good recipes with friends and family.
-      </p>
-    </section>
-
     <div class="about-cta">
       <a href="/" class="cta-button">Browse Recipes</a>
     </div>
@@ -44,15 +29,6 @@ import BaseLayout from "../layouts/base-layout.astro";
   .about-page {
     padding-top: var(--space-xl);
     padding-bottom: var(--space-3xl);
-  }
-
-  .page-title {
-    font-size: var(--text-4xl);
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: var(--space-2xl);
-    text-align: center;
-    line-height: 1.2;
   }
 
   .about-section {
@@ -119,10 +95,6 @@ import BaseLayout from "../layouts/base-layout.astro";
   }
 
   @media (max-width: 768px) {
-    .page-title {
-      font-size: var(--text-3xl);
-    }
-
     .about-section h2 {
       font-size: var(--text-xl);
     }

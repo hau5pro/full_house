@@ -19,14 +19,8 @@
   color: var(--accent);
 }
 
-.cat-tag {
-  text-transform: uppercase;
-  color: var(--accent);
-  font-weight: 600;
-  font-size: var(--text-xs);
-  letter-spacing: 0.08em;
-  margin-bottom: var(--space-sm);
-  display: inline-block;
+.breadcrumb-category {
+  text-transform: capitalize;
 }
 
 /* =========================
