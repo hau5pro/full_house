@@ -3,8 +3,10 @@ title: "Recipe Name"
 description: "A one-sentence hook about why this dish is great."
 image: "https://your-cdn-link.com/image.jpg"
 tags: ["easy", "favorite"]
-prepTime: "15 mins"
-cookTime: "30 mins"
+meta:
+  prepTime: "15 mins"
+  cookTime: "30 mins"
+  servings: "4"
 ---
 
 ## Ingredients

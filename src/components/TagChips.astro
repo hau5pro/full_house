@@ -1,0 +1,23 @@
+---
+interface Props {
+  tags: string[];
+  limit?: number;
+}
+
+const { tags, limit } = Astro.props;
+const visible = limit ? tags.slice(0, limit) : tags;
+const overflow = limit ? tags.length - visible.length : 0;
+---
+
+{
+  visible.length > 0 && (
+    <div class="recipe-tags">
+      {visible.map((tag) => (
+        <span class="tag-chip">#{tag}</span>
+      ))}
+      {overflow > 0 && (
+        <span class="tag-chip tag-chip-overflow">+{overflow}</span>
+      )}
+    </div>
+  )
+}

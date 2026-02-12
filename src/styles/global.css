@@ -250,6 +250,31 @@ footer p::after {
 }
 
 /* =========================
+   TAG CHIPS
+   ========================= */
+.recipe-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.tag-chip {
+  font-size: var(--text-xs);
+  color: var(--accent-warm);
+  background: var(--card-bg);
+  border: 1px solid var(--accent-warm-muted);
+  border-radius: var(--border-radius-sm);
+  padding: 0.15em 0.6em;
+  letter-spacing: 0.03em;
+}
+
+.tag-chip-overflow {
+  color: var(--text-muted);
+  border-color: var(--border);
+}
+
+/* =========================
    ANIMATIONS & EFFECTS
    ========================= */
 @keyframes fadeIn {

@@ -9,9 +9,11 @@ const recipes = defineCollection({
     description: z.string().optional(),
     image: z.string(),
     tags: z.array(z.string()).default([]),
-    prepTime: z.string().optional(),
-    cookTime: z.string().optional(),
-    servings: z.string().optional(),
+    meta: z.object({
+      prepTime: z.string().optional(),
+      cookTime: z.string().optional(),
+      servings: z.string().optional(),
+    }).optional(),
     nutrition: z.object({
       servingSize: z.string(),
       calories: z.number(),

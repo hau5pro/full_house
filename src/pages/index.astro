@@ -4,6 +4,7 @@ import BaseLayout from "../layouts/base-layout.astro";
 import "./index.css";
 import { CDN_BASE } from "../config";
 import { UNCATEGORIZED } from "../infrastructure/constants";
+import TagChips from "../components/TagChips.astro";
 
 const allRecipes = await getCollection("recipes");
 
@@ -59,16 +60,17 @@ const categories = Object.keys(groupedRecipes).sort();
                           {recipe.data.description}
                         </p>
                       )}
-                      {(recipe.data.prepTime || recipe.data.cookTime) && (
+                      <TagChips tags={recipe.data.tags} limit={3} />
+                      {recipe.data.meta && (recipe.data.meta.prepTime || recipe.data.meta.cookTime) && (
                         <div class="recipe-card-meta">
-                          {recipe.data.prepTime && (
+                          {recipe.data.meta.prepTime && (
                             <span class="meta-item">
-                              Prep: {recipe.data.prepTime}
+                              Prep: {recipe.data.meta.prepTime}
                             </span>
                           )}
-                          {recipe.data.cookTime && (
+                          {recipe.data.meta.cookTime && (
                             <span class="meta-item">
-                              Cook: {recipe.data.cookTime}
+                              Cook: {recipe.data.meta.cookTime}
                             </span>
                           )}
                         </div>

@@ -2,6 +2,7 @@
 import { getCollection, render } from "astro:content";
 import { CDN_BASE } from "../../config";
 import BaseLayout from "../../layouts/base-layout.astro";
+import TagChips from "../../components/TagChips.astro";
 import "../../styles/recipe.css";
 
 export async function getStaticPaths() {
@@ -36,40 +37,36 @@ const category = entry.id.includes("/")
         )
       }
       {
-        entry.data.tags && entry.data.tags.length > 0 && (
-          <div class="recipe-tags">
-            {entry.data.tags.map((tag: string) => (
-              <span class="tag-chip">#{tag}</span>
-            ))}
+        entry.data.meta && (
+          <div class="recipe-meta">
+            {
+              entry.data.meta.servings && (
+                <div class="recipe-meta-item">
+                  <span class="meta-label">Servings</span>
+                  <span class="meta-value">{entry.data.meta.servings}</span>
+                </div>
+              )
+            }
+            {
+              entry.data.meta.prepTime && (
+                <div class="recipe-meta-item">
+                  <span class="meta-label">Prep Time</span>
+                  <span class="meta-value">{entry.data.meta.prepTime}</span>
+                </div>
+              )
+            }
+            {
+              entry.data.meta.cookTime && (
+                <div class="recipe-meta-item">
+                  <span class="meta-label">Cook Time</span>
+                  <span class="meta-value">{entry.data.meta.cookTime}</span>
+                </div>
+              )
+            }
           </div>
         )
       }
-      <div class="recipe-meta">
-        {
-          entry.data.servings && (
-            <div class="recipe-meta-item">
-              <span class="meta-label">Servings</span>
-              <span class="meta-value">{entry.data.servings}</span>
-            </div>
-          )
-        }
-        {
-          entry.data.prepTime && (
-            <div class="recipe-meta-item">
-              <span class="meta-label">Prep Time</span>
-              <span class="meta-value">{entry.data.prepTime}</span>
-            </div>
-          )
-        }
-        {
-          entry.data.cookTime && (
-            <div class="recipe-meta-item">
-              <span class="meta-label">Cook Time</span>
-              <span class="meta-value">{entry.data.cookTime}</span>
-            </div>
-          )
-        }
-      </div>
+      <TagChips tags={entry.data.tags} />
       {
         entry.data.image && (
           <img src={imageUrl} alt={entry.data.title} class="recipe-img" />

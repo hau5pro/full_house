@@ -31,9 +31,11 @@ Create a new `.md` file under `src/content/recipes/<category>/`:
 title: "Recipe Name"
 description: "A short description of the dish."
 image: "filename.webp"
-prepTime: "10 min"
-cookTime: "30 min"
 tags: ["tag1", "tag2"]
+meta:
+  prepTime: "10 min"
+  cookTime: "30 min"
+  servings: "4"
 ---
 
 ## Ingredients
