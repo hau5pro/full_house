@@ -4,7 +4,7 @@ description: "Perfect soft or hard boiled eggs every time."
 image: "opt-boiled_eggs.webp"
 meta:
   prepTime: "5 min"
-  cookTime: "4-10 min"
+  cookTime: "4-14 min"
   servings: "1"
 nutrition:
   servingSize: "1 large egg (53 g)"
@@ -17,8 +17,8 @@ tags: ["egg"]
 
 ## Ingredients
 
-- 1 *egg*
-- 1 tsp *salt* (optional)
+- 1 _egg_
+- 1 tsp _salt_ (optional)
 
 ## Directions
 

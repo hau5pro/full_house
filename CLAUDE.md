@@ -51,6 +51,7 @@ nutrition:          # optional
 
 - Ingredients are lowercase (e.g. `- 1/2 cup flour`, not `- 1/2 Cup Flour`)
 - Ingredient names are italicized for amber accent (e.g. `- 1/2 cup *flour*`)
+- Use abbreviations for units (tsp, tbsp, oz, lb, g, kg, ml, L, qt, gal)
 - Sections follow the order: Ingredients, Directions, Notes
 - Directions should be short and direct — no filler or over-explanation
 - Notes use bold labels (e.g. `**Storage:**`, `**Substitution:**`)
