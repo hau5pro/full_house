@@ -1,0 +1,63 @@
+# Full House
+
+Personal cookbook built with Astro 5. Recipes are markdown files with structured frontmatter.
+
+## Commands
+
+- `npm run dev` — dev server at localhost:4321
+- `npm run build` — production build to ./dist/
+- `npm run optimize` — convert images in scripts/media/ to WebP
+- `npm run r2 -- push` — upload images to Cloudflare R2
+
+## Project Structure
+
+- `src/content/recipes/<category>/<recipe>.md` — recipe files grouped by category
+- `src/content/template.md` — copy this to create new recipes
+- `src/content.config.ts` — Zod schema for recipe frontmatter
+- `src/components/` — reusable Astro components (e.g. TagChips)
+- `src/pages/index.astro` — homepage, lists recipes by category
+- `src/pages/recipes/[...slug].astro` — individual recipe page
+- `src/styles/global.css` — design tokens and shared styles
+- `src/styles/recipe.css` — recipe detail page styles
+- `src/config.ts` — CDN base URL
+- `src/infrastructure/constants.ts` — shared constants (use these, don't hardcode)
+- `scripts/r2-media.sh` — R2 push/pull/ls
+- `scripts/optimize-images.ts` — image optimization with sharp
+
+## Recipe Frontmatter Schema
+
+```yaml
+title: "Recipe Name"
+description: "Short hook about the dish."
+image: "opt-filename.webp"
+tags: ["tag1", "tag2"]
+meta:
+  prepTime: "10 min"
+  cookTime: "30 min"
+  servings: "4"
+nutrition:          # optional
+  servingSize: "1 cup"
+  calories: 200
+  protein: "10g"
+  carbs: "20g"
+  fat: "8g"
+```
+
+- `meta` groups servings, prepTime, and cookTime
+- `nutrition` is optional, all other top-level fields are required (except description)
+- Images reference optimized filenames from the CDN (prefixed with `opt-`)
+
+## Recipe Content
+
+- Ingredients are lowercase (e.g. `- 1/2 cup flour`, not `- 1/2 Cup Flour`)
+- Ingredient names are italicized for amber accent (e.g. `- 1/2 cup *flour*`)
+- Sections follow the order: Ingredients, Directions, Notes
+- Notes use bold labels (e.g. `**Storage:**`, `**Substitution:**`)
+
+## Conventions
+
+- No inline styles — use CSS classes
+- Shared constants live in `src/infrastructure/constants.ts`
+- Tag chips use the `TagChips` component (supports `limit` prop for cards)
+- Tag chip styles live in global.css since they're used on multiple pages
+- Verify changes build cleanly with `npm run build`
