@@ -1,3 +1,2 @@
 - Add content
-- Category Navigation
 - Search
