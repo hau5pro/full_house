@@ -2,55 +2,53 @@
 
 A personal cookbook built with [Astro](https://astro.build). Recipes are written in Markdown and organized by category.
 
-## Project Structure
+## Authoring Workflow
 
-```
-src/
-  config.ts              # CDN and site configuration
-  content/
-    recipes/             # Markdown recipe files, grouped by category
-      basics/
-        boiled-eggs.md
-  layouts/
-    base-layout.astro    # Shared page layout
-  pages/
-    index.astro          # Homepage — lists all recipes by category
-    recipes/
-      [...slug].astro    # Individual recipe page
-  styles/
-    global.css           # Design tokens and base styles
-    recipe.css           # Recipe page styles
+### 1. Create the recipe file
+
+Copy the template into the appropriate category folder:
+
+```sh
+cp src/content/template.md src/content/recipes/<category>/<recipe-name>.md
 ```
 
-## Adding a Recipe
+Fill in the frontmatter (title, description, image, tags, meta) and write the recipe content following the section order: **Ingredients, Directions, Notes**.
 
-Copy `src/content/template.md` into `src/content/recipes/<category>/` and fill it in. Images are served from the CDN configured in `src/config.ts`.
+### 2. Optimize the image
 
-## Images & CDN
-
-Recipe images are stored in Cloudflare R2 and served via CDN. The local working directory is `scripts/media/`.
-
-**Optimizing images:**
+Drop the raw image into `scripts/media/`, then run:
 
 ```sh
 npm run optimize
 ```
 
-This converts any `.png`, `.jpg`, `.jpeg`, `.webp` or `.gif` files in `scripts/media/` to WebP (quality 80, max 1280px wide) with an `opt-` prefix, then removes the originals. Reference the optimized filename in recipe frontmatter (e.g., `image: "opt-default.webp"`).
+This converts images to WebP (quality 80, max 1280px wide) with an `opt-` prefix and removes the originals. Update the recipe's `image` field to match (e.g. `image: "opt-my-dish.webp"`).
 
-**Syncing with R2:**
+### 3. Push to CDN
 
 ```sh
-npm run r2 -- push            # Upload all images in scripts/media/
-npm run r2 -- push file.webp  # Upload specific file(s)
-npm run r2 -- pull            # Download all images from R2
-npm run r2 -- pull file.webp  # Download specific file(s)
-npm run r2 -- ls              # List remote files
+npm run r2 -- push
 ```
+
+Only changed files are uploaded. Use `npm run r2 -- ls` to check what's already on remote, or push specific files with `npm run r2 -- push file.webp`.
 
 Requires [rclone](https://rclone.org/) configured with a remote named `r2` pointing to the R2 bucket.
 
-**Typical workflow:** drop a source image into `scripts/media/`, run `npm run optimize`, then `npm run r2 -- push`.
+### 4. Audit the recipe
+
+Run the Claude Code slash command:
+
+```
+/audit <category>/<recipe-name>.md
+```
+
+This checks the recipe against project conventions — frontmatter fields, ingredient formatting, direction conciseness, and note structure — then shows issues and applies fixes.
+
+### 5. Build and verify
+
+```sh
+npm run build
+```
 
 ## Commands
 
@@ -62,3 +60,26 @@ Requires [rclone](https://rclone.org/) configured with a remote named `r2` point
 | `npm run preview`  | Preview the build locally            |
 | `npm run optimize` | Optimize images in `scripts/media/`  |
 | `npm run r2`       | Sync images with Cloudflare R2       |
+
+## Project Structure
+
+```
+src/
+  config.ts              # CDN and site configuration
+  content/
+    template.md          # Copy this to start a new recipe
+    recipes/             # Markdown recipe files, grouped by category
+  components/            # Reusable Astro components
+  layouts/
+    base-layout.astro    # Shared page layout
+  pages/
+    index.astro          # Homepage — lists all recipes by category
+    recipes/
+      [...slug].astro    # Individual recipe page
+  styles/
+    global.css           # Design tokens and base styles
+    recipe.css           # Recipe page styles
+scripts/
+  optimize-images.ts     # Image optimization with sharp
+  r2-media.sh            # R2 push/pull/ls
+```

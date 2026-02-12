@@ -11,9 +11,9 @@ meta:
 
 ## Ingredients
 
-- 1 cup *ingredient one*
-- 2 tbsp *ingredient two*
-- 1/2 tsp *ingredient three*
+- 1 cup _ingredient one_
+- 2 tbsp _ingredient two_
+- 1/2 tsp _ingredient three_
 
 ## Directions
 
