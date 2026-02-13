@@ -20,10 +20,12 @@ const { recipe, priority = false } = Astro.props;
         class="recipe-card-image"
         loading={priority ? "eager" : "lazy"}
         fetchpriority={priority ? "high" : "auto"}
+        transition:name={`recipe-img-${recipe.id.replace(/\//g, "-")}`}
+        transition:animate="fade"
       />
     )}
     <div class="recipe-card-content">
-      <h3 class="recipe-card-title">{recipe.data.title}</h3>
+      <h3 class="recipe-card-title" transition:name={`recipe-title-${recipe.id.replace(/\//g, "-")}`}>{recipe.data.title}</h3>
       {recipe.data.description && (
         <p class="recipe-card-description">
           {recipe.data.description}

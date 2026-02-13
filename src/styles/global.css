@@ -474,6 +474,38 @@ html {
   scroll-behavior: smooth;
 }
 
+/* =========================
+   VIEW TRANSITIONS
+   ========================= */
+::view-transition-old(main-content) {
+  animation: 180ms ease-out both vt-fade-out;
+}
+
+::view-transition-new(main-content) {
+  animation: 300ms ease-out 50ms both vt-slide-up;
+}
+
+@keyframes vt-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes vt-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation-duration: 0s !important;
+  }
+}
+
 /* Selection styling */
 ::selection {
   background: var(--accent);

@@ -7,6 +7,7 @@ import "@fontsource/inter/700.css";
 import "@fontsource/jetbrains-mono/400.css";
 import "@fontsource/jetbrains-mono/500.css";
 import "@fontsource/boogaloo/400.css";
+import { ClientRouter } from "astro:transitions";
 import { getCollection } from "astro:content";
 import Search from "astro-pagefind/components/Search";
 import { UNCATEGORIZED } from "../infrastructure/constants";
@@ -31,9 +32,10 @@ const categories = [
     <link rel="preconnect" href="https://cookbookcdn.hau5.pro" />
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
+    <ClientRouter />
   </head>
   <body>
-    <header class="site-header">
+    <header class="site-header" transition:persist>
       <div class="container">
         <div class="header-content">
           <a href="/" class="logo" aria-label="Full House home">
@@ -77,7 +79,7 @@ const categories = [
       </div>
     </header>
 
-    <main>
+    <main transition:name="main-content">
       <slot />
     </main>
 

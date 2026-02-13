@@ -1,29 +1,4 @@
 /* =========================
-   RECIPE DETAIL - BREADCRUMB
-   ========================= */
-.breadcrumb {
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-  font-size: var(--text-sm);
-  color: var(--text-muted);
-  margin-bottom: var(--space-sm);
-}
-
-.breadcrumb a {
-  color: var(--text-muted);
-  text-decoration: none;
-}
-
-.breadcrumb a:hover {
-  color: var(--accent);
-}
-
-.breadcrumb-category {
-  text-transform: capitalize;
-}
-
-/* =========================
    RECIPE HEADER
    ========================= */
 .recipe-header {

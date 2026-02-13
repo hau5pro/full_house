@@ -47,52 +47,60 @@ const categories = Object.keys(groupedRecipes).sort();
 </BaseLayout>
 
 <script>
-  const sections = document.querySelectorAll<HTMLElement>(".category-section");
-  const navLinks = document.querySelectorAll<HTMLAnchorElement>(".cat-link");
-  const nav = document.querySelector<HTMLElement>(".main-nav");
+  // Smooth scroll for nav links — delegated on persisted header, runs once
+  document.querySelector(".main-nav")?.addEventListener("click", (e) => {
+    const link = (e.target as Element).closest<HTMLAnchorElement>(".cat-link");
+    if (!link) return;
+    const href = link.getAttribute("href");
+    if (!href) return;
+    const hash = href.startsWith("/#") ? href.slice(1) : href;
+    const target = document.querySelector(hash);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: "smooth" });
+      history.pushState(null, "", hash);
+    }
+  });
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      for (const entry of entries) {
-        if (entry.isIntersecting) {
-          const id = entry.target.id;
-          navLinks.forEach((link) => {
-            const href = link.getAttribute("href");
-            link.classList.toggle(
-              "active",
-              href === `#${id}` || href === `/#${id}`,
-            );
-          });
+  // Intersection observer — re-setup on each navigation for new DOM
+  let sectionObserver: IntersectionObserver | null = null;
 
-          // Scroll active link into view in nav
-          const active = nav?.querySelector(".active");
-          if (active && nav) {
-            active.scrollIntoView({
-              inline: "center",
-              block: "nearest",
-              behavior: "smooth",
+  document.addEventListener("astro:page-load", () => {
+    sectionObserver?.disconnect();
+
+    const sections = document.querySelectorAll<HTMLElement>(".category-section");
+    if (sections.length === 0) return;
+
+    const navLinks = document.querySelectorAll<HTMLAnchorElement>(".cat-link");
+    const nav = document.querySelector<HTMLElement>(".main-nav");
+
+    sectionObserver = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            navLinks.forEach((link) => {
+              const href = link.getAttribute("href");
+              link.classList.toggle(
+                "active",
+                href === `#${id}` || href === `/#${id}`,
+              );
             });
+
+            const active = nav?.querySelector(".active");
+            if (active && nav) {
+              active.scrollIntoView({
+                inline: "center",
+                block: "nearest",
+                behavior: "smooth",
+              });
+            }
           }
         }
-      }
-    },
-    { rootMargin: "-20% 0px -60% 0px" },
-  );
+      },
+      { rootMargin: "-20% 0px -60% 0px" },
+    );
 
-  sections.forEach((section) => observer.observe(section));
-
-  // Smooth scroll for same-page clicks
-  navLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      const href = link.getAttribute("href");
-      if (!href) return;
-      const hash = href.startsWith("/#") ? href.slice(1) : href;
-      const target = document.querySelector(hash);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: "smooth" });
-        history.pushState(null, "", hash);
-      }
-    });
+    sections.forEach((section) => sectionObserver!.observe(section));
   });
 </script>

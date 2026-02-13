@@ -1,7 +1,6 @@
 ---
 import { getCollection, render } from "astro:content";
 import { CDN_BASE } from "../../config";
-import { UNCATEGORIZED } from "../../infrastructure/constants";
 import BaseLayout from "../../layouts/base-layout.astro";
 import TagChips from "../../components/TagChips.astro";
 import NutritionCard from "../../components/NutritionCard.astro";
@@ -19,20 +18,12 @@ const { entry } = Astro.props;
 const imageUrl = `${CDN_BASE}/${entry.data.image}`;
 const { Content } = await render(entry);
 
-const category = entry.id.includes("/")
-  ? entry.id.split("/")[0]
-  : UNCATEGORIZED;
 ---
 
 <BaseLayout title={`${entry.data.title} | Full House`} description={entry.data.description}>
   <div class="container-narrow" data-pagefind-body>
-    <nav class="breadcrumb" data-pagefind-ignore>
-      <a href="/" aria-label="Back to all recipes">Recipes</a>
-      <span>/</span>
-      <span class="breadcrumb-category">{category}</span>
-    </nav>
     <header class="recipe-header">
-      <h1>{entry.data.title}</h1>
+      <h1 transition:name={`recipe-title-${entry.id.replace(/\//g, "-")}`}>{entry.data.title}</h1>
       {
         entry.data.description && (
           <p class="recipe-description" data-pagefind-weight="3">{entry.data.description}</p>
@@ -73,7 +64,7 @@ const category = entry.id.includes("/")
       </div>
       {
         entry.data.image && (
-          <img src={imageUrl} alt={entry.data.title} class="recipe-img" data-pagefind-meta="image[src]" />
+          <img src={imageUrl} alt={entry.data.title} class="recipe-img" data-pagefind-meta="image[src]" transition:name={`recipe-img-${entry.id.replace(/\//g, "-")}`} transition:animate="fade" />
         )
       }
     </header>
