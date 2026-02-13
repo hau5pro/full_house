@@ -68,7 +68,7 @@ const category = entry.id.includes("/")
           </div>
         )
       }
-      <TagChips tags={entry.data.tags} />
+      <TagChips tags={entry.data.tags} linked />
       {
         entry.data.image && (
           <img src={imageUrl} alt={entry.data.title} class="recipe-img" />

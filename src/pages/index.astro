@@ -2,9 +2,9 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import BaseLayout from "../layouts/base-layout.astro";
 import "./index.css";
-import { CDN_BASE } from "../config";
+import "../styles/recipe-grid.css";
 import { UNCATEGORIZED } from "../infrastructure/constants";
-import TagChips from "../components/TagChips.astro";
+import RecipeCard from "../components/RecipeCard.astro";
 
 const allRecipes = await getCollection("recipes");
 
@@ -45,40 +45,7 @@ const categories = Object.keys(groupedRecipes).sort();
               <ul class="recipe-grid">
                 {groupedRecipes[category].map((recipe) => (
                   <li>
-                    <a href={`/recipes/${recipe.id}`} class="recipe-card-link">
-                      <article class="recipe-card">
-                        {recipe.data.image && (
-                          <img
-                            src={`${CDN_BASE}/${recipe.data.image}`}
-                            alt={recipe.data.title}
-                            class="recipe-card-image"
-                          />
-                        )}
-                        <div class="recipe-card-content">
-                          <h3 class="recipe-card-title">{recipe.data.title}</h3>
-                          {recipe.data.description && (
-                            <p class="recipe-card-description">
-                              {recipe.data.description}
-                            </p>
-                          )}
-                          <TagChips tags={recipe.data.tags} limit={3} />
-                          {recipe.data.meta && (recipe.data.meta.prepTime || recipe.data.meta.cookTime) && (
-                            <div class="recipe-card-meta">
-                              {recipe.data.meta.prepTime && (
-                                <span class="meta-item">
-                                  Prep: {recipe.data.meta.prepTime}
-                                </span>
-                              )}
-                              {recipe.data.meta.cookTime && (
-                                <span class="meta-item">
-                                  Cook: {recipe.data.meta.cookTime}
-                                </span>
-                              )}
-                            </div>
-                          )}
-                        </div>
-                      </article>
-                    </a>
+                    <RecipeCard recipe={recipe} />
                   </li>
                 ))}
               </ul>

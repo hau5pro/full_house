@@ -274,6 +274,17 @@ footer p::after {
   border-color: var(--border);
 }
 
+a.tag-chip {
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+a.tag-chip:hover {
+  background: var(--accent-warm-muted);
+  color: var(--text);
+  opacity: 1;
+}
+
 /* =========================
    ANIMATIONS & EFFECTS
    ========================= */

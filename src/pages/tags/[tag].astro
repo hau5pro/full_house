@@ -1,0 +1,81 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/base-layout.astro";
+import RecipeCard from "../../components/RecipeCard.astro";
+import "../../styles/recipe-grid.css";
+
+export async function getStaticPaths() {
+  const allRecipes = await getCollection("recipes");
+
+  const tagMap = new Map<string, typeof allRecipes>();
+  for (const recipe of allRecipes) {
+    for (const tag of recipe.data.tags) {
+      if (!tagMap.has(tag)) {
+        tagMap.set(tag, []);
+      }
+      tagMap.get(tag)!.push(recipe);
+    }
+  }
+
+  return [...tagMap.entries()].map(([tag, recipes]) => ({
+    params: { tag },
+    props: { recipes },
+  }));
+}
+
+const { tag } = Astro.params;
+const { recipes } = Astro.props;
+---
+
+<BaseLayout title={`#${tag} | Full House`}>
+  <div class="container">
+    <nav class="tag-back">
+      <a href="/">&larr; All recipes</a>
+    </nav>
+    <header class="tag-header">
+      <h1>#{tag}</h1>
+      <p class="tag-count">{recipes.length} {recipes.length === 1 ? 'recipe' : 'recipes'}</p>
+    </header>
+    <ul class="recipe-grid">
+      {recipes.map((recipe) => (
+        <li>
+          <RecipeCard recipe={recipe} />
+        </li>
+      ))}
+    </ul>
+  </div>
+</BaseLayout>
+
+<style>
+  .tag-back {
+    margin-bottom: var(--space-lg);
+  }
+
+  .tag-back a {
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+
+  .tag-back a:hover {
+    color: var(--accent);
+    opacity: 1;
+  }
+
+  .tag-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .tag-header h1 {
+    font-size: var(--text-3xl);
+    color: var(--accent-warm);
+    margin-bottom: var(--space-xs);
+  }
+
+  .tag-count {
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+    font-family: 'JetBrains Mono', monospace;
+  }
+</style>

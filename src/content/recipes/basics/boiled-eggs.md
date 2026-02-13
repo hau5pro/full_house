@@ -4,7 +4,7 @@ description: "Perfect soft or hard boiled eggs every time."
 image: "opt-boiled_eggs.webp"
 meta:
   prepTime: "5 min"
-  cookTime: "4-14 min"
+  cookTime: "6-14 min"
   servings: "1"
 nutrition:
   servingSize: "1 large egg (53 g)"
@@ -26,7 +26,7 @@ tags: ["egg"]
 
 2. Bring to a rolling boil over high heat.
 
-3. Remove from heat and let stand 10-12 minutes (adjust slightly for egg size).
+3. Remove from heat and let stand 6-14 minutes (adjust slightly for egg size).
 
 4. Drain and run cold water over eggs until cooled to prevent green rings on the yolks.
 
