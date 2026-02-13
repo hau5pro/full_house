@@ -1,5 +1,12 @@
 ---
 import "../styles/global.css";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
+import "@fontsource/jetbrains-mono/400.css";
+import "@fontsource/jetbrains-mono/500.css";
+import "@fontsource/boogaloo/400.css";
 import { getCollection } from "astro:content";
 import Search from "astro-pagefind/components/Search";
 import { UNCATEGORIZED } from "../infrastructure/constants";
@@ -21,13 +28,7 @@ const categories = [
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://cookbookcdn.hau5.pro" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Boogaloo&display=swap"
-      rel="stylesheet"
-    />
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
   </head>

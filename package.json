@@ -12,6 +12,9 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.0",
+    "@fontsource/boogaloo": "^5.2.8",
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/jetbrains-mono": "^5.2.8",
     "astro": "^5.17.1",
     "astro-pagefind": "^1.8.5"
   },
