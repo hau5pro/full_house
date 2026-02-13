@@ -1,12 +1,18 @@
 ---
 title: "Recipe Name"
-description: ""
+description: "Short hook about the dish."
 image: "opt-default.webp"
-tags: ["easy"]
+tags: ["tag1", "tag2"]
 meta:
-  prepTime: "15 mins"
-  cookTime: "30 mins"
+  prepTime: "15 min"
+  cookTime: "30 min"
   servings: "4"
+nutrition:
+  servingSize: "1 cup"
+  calories: 200
+  protein: "10g"
+  carbs: "20g"
+  fat: "8g"
 ---
 
 ## Ingredients
