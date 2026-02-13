@@ -26,10 +26,8 @@ const groupedRecipes = allRecipes.reduce(
 const categories = Object.keys(groupedRecipes).sort();
 ---
 
-<BaseLayout title="Full House - Cookbook">
+<BaseLayout title="Full House - Cookbook" description="A personal cookbook with easy-to-follow recipes organized by category.">
   <div class="container">
-    <p class="hero-subtitle">Can you smell what the rock is cooking?</p>
-
     {
       categories.map((category) => (
         <section id={category} class="category-section">
@@ -48,9 +46,9 @@ const categories = Object.keys(groupedRecipes).sort();
 </BaseLayout>
 
 <script>
-  const sections = document.querySelectorAll<HTMLElement>('.category-section');
-  const navLinks = document.querySelectorAll<HTMLAnchorElement>('.cat-link');
-  const nav = document.querySelector<HTMLElement>('.main-nav');
+  const sections = document.querySelectorAll<HTMLElement>(".category-section");
+  const navLinks = document.querySelectorAll<HTMLAnchorElement>(".cat-link");
+  const nav = document.querySelector<HTMLElement>(".main-nav");
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -58,34 +56,41 @@ const categories = Object.keys(groupedRecipes).sort();
         if (entry.isIntersecting) {
           const id = entry.target.id;
           navLinks.forEach((link) => {
-            const href = link.getAttribute('href');
-            link.classList.toggle('active', href === `#${id}` || href === `/#${id}`);
+            const href = link.getAttribute("href");
+            link.classList.toggle(
+              "active",
+              href === `#${id}` || href === `/#${id}`,
+            );
           });
 
           // Scroll active link into view in nav
-          const active = nav?.querySelector('.active');
+          const active = nav?.querySelector(".active");
           if (active && nav) {
-            active.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
+            active.scrollIntoView({
+              inline: "center",
+              block: "nearest",
+              behavior: "smooth",
+            });
           }
         }
       }
     },
-    { rootMargin: '-20% 0px -60% 0px' }
+    { rootMargin: "-20% 0px -60% 0px" },
   );
 
   sections.forEach((section) => observer.observe(section));
 
   // Smooth scroll for same-page clicks
   navLinks.forEach((link) => {
-    link.addEventListener('click', (e) => {
-      const href = link.getAttribute('href');
+    link.addEventListener("click", (e) => {
+      const href = link.getAttribute("href");
       if (!href) return;
-      const hash = href.startsWith('/#') ? href.slice(1) : href;
+      const hash = href.startsWith("/#") ? href.slice(1) : href;
       const target = document.querySelector(hash);
       if (target) {
         e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
-        history.pushState(null, '', hash);
+        target.scrollIntoView({ behavior: "smooth" });
+        history.pushState(null, "", hash);
       }
     });
   });

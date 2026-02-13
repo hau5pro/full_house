@@ -1,9 +1,4 @@
 /* =========================
-   FONTS
-   ========================= */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Boogaloo&display=swap');
-
-/* =========================
    CSS VARIABLES - DESIGN SYSTEM
    ========================= */
 :root {
@@ -14,8 +9,8 @@
 
   /* Text & Accents */
   --text: #dbdbdb;         /* High-readability light gray */
-  --text-muted: #888888;   /* Muted gray for metadata */
-  --accent: #7b5eea;       /* Classic Obsidian Purple */
+  --text-muted: #ababab;   /* Muted gray for metadata */
+  --accent: #8b71ed;       /* Classic Obsidian Purple */
   --accent-muted: #4a3b8c; /* Deeper purple for borders */
   --accent-warm: #e8a44a;  /* Warm amber — split-complementary */
   --accent-warm-muted: #8c6a2e; /* Deeper amber for borders */
@@ -89,13 +84,12 @@ body {
    HEADER & NAVIGATION
    ========================= */
 .site-header {
-  background: rgba(22, 22, 22, 0.95);
+  background: #161616;
   border-bottom: 1px solid var(--border);
   padding: var(--space-md) 0;
   position: sticky;
   top: 0;
   z-index: 100;
-  backdrop-filter: blur(10px);
 }
 
 .header-content {
@@ -239,7 +233,7 @@ a {
 }
 
 a:hover {
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 /* =========================

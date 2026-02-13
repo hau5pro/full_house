@@ -27,7 +27,7 @@ const category = entry.id.includes("/")
 <BaseLayout title={`${entry.data.title} | Full House`} description={entry.data.description}>
   <div class="container-narrow" data-pagefind-body>
     <nav class="breadcrumb" data-pagefind-ignore>
-      <a href="/">Recipes</a>
+      <a href="/" aria-label="Back to all recipes">Recipes</a>
       <span>/</span>
       <span class="breadcrumb-category">{category}</span>
     </nav>

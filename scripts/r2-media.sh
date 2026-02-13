@@ -26,7 +26,7 @@ push() {
       skipped=$((skipped + 1))
     else
       echo "  uploading $name..."
-      rclone copyto "$f" "$REMOTE/$name"
+      rclone copyto "$f" "$REMOTE/$name" --header-upload "Cache-Control: public, max-age=31536000, immutable"
       pushed=$((pushed + 1))
     fi
   done
