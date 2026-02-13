@@ -385,14 +385,13 @@ button:focus-visible {
     padding-right: var(--space-md);
   }
 
-  .header-content {
-    flex-direction: column;
-    gap: var(--space-md);
-    text-align: center;
+  .logo-text {
+    display: none;
   }
 
   .main-nav {
-    width: 100%;
+    flex: 1;
+    min-width: 0;
   }
 }
 
@@ -401,10 +400,6 @@ button:focus-visible {
   :root {
     --space-2xl: 2rem;
     --space-3xl: 2.5rem;
-  }
-
-  .logo-text {
-    font-size: var(--text-lg);
   }
 
   .cat-link {
