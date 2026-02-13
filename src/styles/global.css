@@ -135,6 +135,12 @@ body {
   background-clip: text;
 }
 
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
 .main-nav {
   display: flex;
   gap: var(--space-lg);
@@ -306,6 +312,152 @@ a.tag-chip:hover {
 }
 
 /* =========================
+   PAGEFIND SEARCH
+   ========================= */
+.header-search {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.pagefind-ui {
+  --pagefind-ui-scale: 0.7;
+  --pagefind-ui-primary: var(--accent);
+  --pagefind-ui-text: var(--text);
+  --pagefind-ui-background: var(--card-bg);
+  --pagefind-ui-border: var(--border);
+  --pagefind-ui-tag: var(--accent-muted);
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: var(--border-radius-md);
+  --pagefind-ui-image-border-radius: var(--border-radius-sm);
+  --pagefind-ui-image-box-ratio: 3 / 2;
+  --pagefind-ui-font: inherit;
+}
+
+.pagefind-ui .pagefind-ui__search-input {
+  background: var(--bg);
+  color: var(--text);
+  width: 220px;
+  transition: width var(--transition-base);
+}
+
+.pagefind-ui .pagefind-ui__search-input:focus {
+  width: 320px;
+}
+
+.pagefind-ui .pagefind-ui__search-clear {
+  color: var(--text-muted);
+}
+
+.pagefind-ui .pagefind-ui__drawer {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 200;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-lg);
+  width: max(400px, 40vw);
+  max-height: 70vh;
+  overflow-y: auto;
+  margin-top: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+}
+
+.pagefind-ui .pagefind-ui__results-area {
+  margin-top: 0;
+}
+
+.pagefind-ui .pagefind-ui__message {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  padding: 0 0 var(--space-xs);
+  margin: 0;
+}
+
+.pagefind-ui .pagefind-ui__results {
+  margin: 0;
+  padding: 0;
+}
+
+.pagefind-ui .pagefind-ui__result {
+  position: relative;
+  cursor: pointer;
+  border-radius: 0;
+  padding: var(--space-sm) var(--space-md);
+  margin: 0 calc(-1 * var(--space-md));
+  transition: background var(--transition-fast);
+  border-bottom: 1px solid var(--border);
+}
+
+.pagefind-ui .pagefind-ui__result:last-child {
+  border-bottom: none;
+}
+
+.pagefind-ui .pagefind-ui__result:hover,
+.pagefind-ui .pagefind-ui__result.pagefind-ui__result--active {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.pagefind-ui .pagefind-ui__result-thumb {
+  width: 60px;
+  min-width: 60px;
+  height: 44px;
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+}
+
+.pagefind-ui .pagefind-ui__result-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pagefind-ui .pagefind-ui__result-link {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.pagefind-ui .pagefind-ui__result-link:hover {
+  text-decoration: none !important;
+}
+
+.pagefind-ui .pagefind-ui__result-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.pagefind-ui .pagefind-ui__result-excerpt {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  margin: 0;
+}
+
+.pagefind-ui .pagefind-ui__button {
+  background: var(--card-bg);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--text-sm);
+  padding: var(--space-xs) var(--space-md);
+  margin-top: var(--space-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.pagefind-ui .pagefind-ui__button:hover {
+  color: var(--text);
+  border-color: var(--accent-muted);
+}
+
+.pagefind-ui mark {
+  background: var(--accent-muted);
+  color: var(--text);
+}
+
+/* =========================
    ANIMATIONS & EFFECTS
    ========================= */
 @keyframes fadeIn {
@@ -389,9 +541,36 @@ button:focus-visible {
     display: none;
   }
 
+  .header-right {
+    flex-wrap: wrap;
+    flex: 1;
+    min-width: 0;
+    justify-content: flex-end;
+  }
+
   .main-nav {
     flex: 1;
     min-width: 0;
+  }
+
+  .header-search {
+    flex-basis: 100%;
+  }
+
+  .pagefind-ui {
+    --pagefind-ui-scale: 0.65;
+  }
+
+  .pagefind-ui .pagefind-ui__search-input,
+  .pagefind-ui .pagefind-ui__search-input:focus {
+    width: 100%;
+  }
+
+  .pagefind-ui .pagefind-ui__drawer {
+    width: calc(100vw - var(--space-md) * 2);
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
   }
 }
 
