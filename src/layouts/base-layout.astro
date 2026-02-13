@@ -1,6 +1,16 @@
 ---
 import "../styles/global.css";
+import { getCollection } from "astro:content";
+import { UNCATEGORIZED } from "../infrastructure/constants";
+
 const { title, description } = Astro.props;
+
+const allRecipes = await getCollection("recipes");
+const categories = [
+  ...new Set(
+    allRecipes.map((r) => (r.id.includes("/") ? r.id.split("/")[0] : UNCATEGORIZED))
+  ),
+].sort();
 ---
 
 <html lang="en">
@@ -16,12 +26,21 @@ const { title, description } = Astro.props;
       <div class="container">
         <div class="header-content">
           <a href="/" class="logo">
-            <span class="logo-icon">🏠</span>
+            <svg class="logo-icon" viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M32 8 L4 32 L14 32 L14 56 L50 56 L50 32 L60 32 Z" fill="url(#house-grad)" />
+              <defs>
+                <linearGradient id="house-grad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="var(--accent)" />
+                  <stop offset="100%" stop-color="#9b7eea" />
+                </linearGradient>
+              </defs>
+            </svg>
             <span class="logo-text">Full House</span>
           </a>
           <nav class="main-nav">
-            <a href="/" class="nav-link">Recipes</a>
-            <a href="/about" class="nav-link">About</a>
+            {categories.map((category) => (
+              <a href={`/#${category}`} class="cat-link">{category}</a>
+            ))}
           </nav>
         </div>
       </div>

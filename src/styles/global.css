@@ -1,7 +1,7 @@
 /* =========================
    FONTS
    ========================= */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Boogaloo&display=swap');
 
 /* =========================
    CSS VARIABLES - DESIGN SYSTEM
@@ -122,11 +122,13 @@ body {
 }
 
 .logo-icon {
-  font-size: var(--text-2xl);
-  filter: drop-shadow(0 0 8px rgba(123, 94, 234, 0.4));
+  width: 28px;
+  height: 28px;
 }
 
 .logo-text {
+  font-family: 'Boogaloo', cursive;
+  font-size: var(--text-2xl);
   background: linear-gradient(135deg, var(--accent) 0%, #9b7eea 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -137,9 +139,15 @@ body {
   display: flex;
   gap: var(--space-lg);
   align-items: center;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
 
-.nav-link {
+.main-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.cat-link {
   color: var(--text-muted);
   font-size: var(--text-base);
   font-weight: 500;
@@ -148,14 +156,16 @@ body {
   transition: all var(--transition-fast);
   position: relative;
   text-decoration: none;
+  text-transform: capitalize;
+  white-space: nowrap;
 }
 
-.nav-link:hover {
+.cat-link:hover {
   color: var(--accent);
   opacity: 1;
 }
 
-.nav-link::after {
+.cat-link::after {
   content: '';
   position: absolute;
   bottom: -4px;
@@ -167,8 +177,14 @@ body {
   transition: transform var(--transition-base);
 }
 
-.nav-link:hover::after {
+.cat-link:hover::after,
+.cat-link.active::after {
   transform: translateX(-50%) scaleX(1);
+}
+
+.cat-link.active {
+  color: var(--accent);
+  opacity: 1;
 }
 
 /* =========================
@@ -203,7 +219,11 @@ main {
    ========================= */
 h1,
 h2 {
-  color: var(--accent);
+  background: linear-gradient(135deg, var(--accent) 0%, #9b7eea 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  width: fit-content;
 }
 
 a {
@@ -373,7 +393,6 @@ button:focus-visible {
 
   .main-nav {
     width: 100%;
-    justify-content: center;
   }
 }
 
@@ -385,14 +404,10 @@ button:focus-visible {
   }
 
   .logo-text {
-    display: none;
+    font-size: var(--text-lg);
   }
 
-  .main-nav {
-    gap: var(--space-sm);
-  }
-
-  .nav-link {
+  .cat-link {
     padding: var(--space-xs) var(--space-sm);
     font-size: var(--text-sm);
   }

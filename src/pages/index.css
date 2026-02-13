@@ -11,61 +11,11 @@
 }
 
 /* =========================
-   CONTENT LAYOUT
-   ========================= */
-.content-layout {
-  display: flex;
-  gap: var(--space-2xl);
-  align-items: flex-start;
-}
-
-.category-content {
-  flex: 1;
-  min-width: 0;
-}
-
-/* =========================
-   CATEGORY SIDEBAR NAV
-   ========================= */
-.category-nav {
-  position: sticky;
-  top: 5rem;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xs);
-  width: 160px;
-  flex-shrink: 0;
-}
-
-.category-nav-link {
-  font-size: var(--text-sm);
-  color: var(--text-muted);
-  text-decoration: none;
-  padding: var(--space-xs) var(--space-sm);
-  border-radius: var(--border-radius-sm);
-  border-left: 2px solid transparent;
-  transition: all var(--transition-fast);
-  text-transform: capitalize;
-}
-
-.category-nav-link:hover {
-  color: var(--text);
-  opacity: 1;
-}
-
-.category-nav-link.active {
-  color: var(--accent);
-  border-left-color: var(--accent);
-  background: rgba(123, 94, 234, 0.08);
-  opacity: 1;
-}
-
-/* =========================
    CATEGORY SECTIONS
    ========================= */
 .category-section {
   margin-bottom: var(--space-3xl);
-  scroll-margin-top: 5rem;
+  scroll-margin-top: 7rem;
 }
 
 .category-header {
@@ -86,52 +36,4 @@
   height: 24px;
   background: var(--accent);
   border-radius: 2px;
-}
-
-/* =========================
-   RESPONSIVE
-   ========================= */
-@media (max-width: 768px) {
-  .content-layout {
-    flex-direction: column;
-    gap: 0;
-    padding-bottom: 3.5rem;
-  }
-
-  .category-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: auto;
-    z-index: 90;
-    flex-direction: row;
-    width: auto;
-    overflow-x: auto;
-    gap: var(--space-sm);
-    padding: var(--space-sm) var(--space-md);
-    background: rgba(22, 22, 22, 0.95);
-    backdrop-filter: blur(10px);
-    border-top: 1px solid var(--border);
-    scrollbar-width: none;
-  }
-
-  .category-nav::-webkit-scrollbar {
-    display: none;
-  }
-
-  .category-nav-link {
-    white-space: nowrap;
-    border-left: none;
-    border-radius: 999px;
-    padding: var(--space-xs) var(--space-md);
-    border: 1px solid var(--border);
-    font-size: var(--text-xs);
-  }
-
-  .category-nav-link.active {
-    border-left-color: unset;
-    border-color: var(--accent);
-    background: rgba(123, 94, 234, 0.15);
-  }
 }
