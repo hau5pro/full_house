@@ -59,6 +59,7 @@ nutrition:          # optional
 ## Conventions
 
 - No inline styles — use CSS classes
+- No inline `<style>` or `<script>` tags — keep styles in `src/styles/` and scripts in `src/scripts/`
 - Shared constants live in `src/infrastructure/constants.ts`
 - Tag chips use the `TagChips` component (supports `limit` prop for cards)
 - Tag chip styles live in global.css since they're used on multiple pages

@@ -128,7 +128,7 @@ body {
 
 .logo-text {
   font-family: 'Boogaloo', cursive;
-  font-size: var(--text-2xl);
+  font-size: var(--text-3xl);
   background: linear-gradient(135deg, var(--accent) 0%, #9b7eea 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
