@@ -28,20 +28,21 @@ const categories = Object.keys(groupedRecipes).sort();
 
 <BaseLayout title="Full House - Cookbook" description="A personal cookbook with easy-to-follow recipes organized by category.">
   <div class="container">
-    {
-      categories.map((category) => (
+    {(() => {
+      let cardIndex = 0;
+      return categories.map((category) => (
         <section id={category} class="category-section">
           <h2 class="category-header">{category}</h2>
           <ul class="recipe-grid">
             {groupedRecipes[category].map((recipe) => (
               <li>
-                <RecipeCard recipe={recipe} />
+                <RecipeCard recipe={recipe} priority={cardIndex++ < 4} />
               </li>
             ))}
           </ul>
         </section>
-      ))
-    }
+      ));
+    })()}
   </div>
 </BaseLayout>
 
