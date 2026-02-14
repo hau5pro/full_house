@@ -3,7 +3,7 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import BaseLayout from "../layouts/base-layout.astro";
 import "./index.css";
 import "../styles/recipe-grid.css";
-import { UNCATEGORIZED } from "../infrastructure/constants";
+import { UNCATEGORIZED, sortCategories } from "../infrastructure/constants";
 import RecipeCard from "../components/RecipeCard.astro";
 
 const allRecipes = await getCollection("recipes");
@@ -23,7 +23,7 @@ const groupedRecipes = allRecipes.reduce(
   {},
 );
 
-const categories = Object.keys(groupedRecipes).sort();
+const categories = sortCategories(Object.keys(groupedRecipes));
 ---
 
 <BaseLayout

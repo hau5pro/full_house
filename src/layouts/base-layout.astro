@@ -10,18 +10,18 @@ import "@fontsource/boogaloo/400.css";
 import { ClientRouter } from "astro:transitions";
 import { getCollection } from "astro:content";
 import Search from "astro-pagefind/components/Search";
-import { UNCATEGORIZED } from "../infrastructure/constants";
+import { UNCATEGORIZED, sortCategories } from "../infrastructure/constants";
 
 const { title, description } = Astro.props;
 
 const allRecipes = await getCollection("recipes");
-const categories = [
+const categories = sortCategories([
   ...new Set(
     allRecipes.map((r) =>
       r.id.includes("/") ? r.id.split("/")[0] : UNCATEGORIZED,
     ),
   ),
-].sort();
+]);
 ---
 
 <html lang="en">
