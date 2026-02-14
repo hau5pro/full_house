@@ -26,23 +26,28 @@ const groupedRecipes = allRecipes.reduce(
 const categories = Object.keys(groupedRecipes).sort();
 ---
 
-<BaseLayout title="Full House - Cookbook" description="A personal cookbook with easy-to-follow recipes organized by category.">
+<BaseLayout
+  title="Full House - A Recipe Book"
+  description="A personal cookbook with easy-to-follow recipes organized by category."
+>
   <div class="container">
-    {(() => {
-      let cardIndex = 0;
-      return categories.map((category) => (
-        <section id={category} class="category-section">
-          <h2 class="category-header">{category}</h2>
-          <ul class="recipe-grid">
-            {groupedRecipes[category].map((recipe) => (
-              <li>
-                <RecipeCard recipe={recipe} priority={cardIndex++ < 4} />
-              </li>
-            ))}
-          </ul>
-        </section>
-      ));
-    })()}
+    {
+      (() => {
+        let cardIndex = 0;
+        return categories.map((category) => (
+          <section id={category} class="category-section">
+            <h2 class="category-header">{category}</h2>
+            <ul class="recipe-grid">
+              {groupedRecipes[category].map((recipe) => (
+                <li>
+                  <RecipeCard recipe={recipe} priority={cardIndex++ < 4} />
+                </li>
+              ))}
+            </ul>
+          </section>
+        ));
+      })()
+    }
   </div>
 </BaseLayout>
 
@@ -68,7 +73,8 @@ const categories = Object.keys(groupedRecipes).sort();
   document.addEventListener("astro:page-load", () => {
     sectionObserver?.disconnect();
 
-    const sections = document.querySelectorAll<HTMLElement>(".category-section");
+    const sections =
+      document.querySelectorAll<HTMLElement>(".category-section");
     if (sections.length === 0) return;
 
     const navLinks = document.querySelectorAll<HTMLAnchorElement>(".cat-link");
