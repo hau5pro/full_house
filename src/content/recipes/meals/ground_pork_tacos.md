@@ -1,8 +1,8 @@
 ---
 title: "Ground Pork Tacos"
 description: "Crispy-edged seasoned pork in warm tortillas with all the fixings."
-image: "opt-default.webp"
-tags: ["meal", "mexican", "ground_pork"]
+image: "opt-ground_pork_taco.webp"
+tags: ["meal", "mexican", "ground_pork", "ground_beef"]
 meta:
   prepTime: "15 min"
   cookTime: "10 min"
@@ -17,22 +17,22 @@ nutrition:
 
 ## Ingredients
 
-- 1 tsp *olive oil*
-- 1 lb *ground pork* or bulk ground sausage
-- 1-2 tbsp [*taco seasoning*](/recipes/seasonings/ground_meat_taco_seasoning)
-- 1/4 cup *water* (can substitute broth)
-- *salt* to taste
-- 8 *flour or corn tortillas*
+- 1 tsp _olive oil_
+- 1 lb _ground pork_ (or _ground beef_)
+- 1-2 tbsp [_taco seasoning_](/recipes/seasonings/ground_meat_taco_seasoning)
+- 1/4 cup _water_ (can substitute broth)
+- _salt_ to taste
+- 8 _flour or corn tortillas_
 
 _OPTIONAL TOPPINGS_
 
-- shredded *cabbage*, see notes
-- 1 large *avocado*, pitted and mashed
-- 2 tbsp *sour cream*, see notes
-- *pickled onions*
-- *pico de gallo*
-- *tomatillo salsa*
-- *lime*, quartered
+- shredded _cabbage_, see notes
+- 1 large _avocado_, pitted and mashed
+- 2 tbsp _sour cream_, see notes
+- _pickled onions_
+- _pico de gallo_
+- _tomatillo salsa_
+- _lime_, quartered
 
 ## Directions
 
