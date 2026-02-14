@@ -1,34 +1,42 @@
 ---
-title: "Recipe Name"
-description: "Short hook about the dish."
-image: "opt-default.webp"
-tags: ["tag1", "tag2"]
+title: "Creamy Garlic Shrimp"
+description: "Rich, garlicky cream sauce over perfectly seared shrimp."
+image: "opt-creamy_garlic_shrimp.webp"
+tags: ["main", "italian", "shrimp"]
 meta:
-  prepTime: "15 min"
-  cookTime: "30 min"
-  servings: "4"
+  prepTime: "5 min"
+  cookTime: "10 min"
+  servings: "6"
 nutrition:
-  servingSize: "1 cup"
-  calories: 200
-  protein: "10g"
-  carbs: "20g"
-  fat: "8g"
+  calories: 345
+  protein: "33.9g"
+  carbs: "2g"
+  fat: "22g"
 ---
 
 ## Ingredients
 
-- 1 cup _ingredient one_
-- 2 tbsp _ingredient two_
-- 1/2 tsp _ingredient three_
+- 2 tbsp _vegetable oil_
+- 2 lb _jumbo shrimp_, peeled, deveined, tails removed
+- 1/4 tsp _salt_
+- 1/4 tsp _black pepper_
+- 2 tbsp _butter_
+- 1 tbsp _garlic_, minced
+- 2 tbsp _white wine_
+- 1 1/2 cups _heavy cream_
+- 1 tsp _italian seasoning_
+- 1/2 cup _white cheddar_, shredded (or grated parmesan)
+- 1 tbsp fresh _parsley_, finely chopped
 
 ## Directions
 
-1. Describe the first action here (bolding the start helps readability).
-2. Keep your instructions clear and concise.
-3. Mention any heat levels or specific equipment.
+1. Heat oil in a large skillet over medium-high heat. Sear shrimp 2-3 minutes per side until pink. Season with salt and pepper, set aside.
+2. Add butter and garlic to the skillet, sauté until fragrant, about 1 minute. Add wine and stir for 1 minute.
+3. Add heavy cream, italian seasoning, and cheddar. Bring to a simmer, reduce heat to medium, and stir until thickened.
+4. Return shrimp to the skillet and toss to coat.
+5. Garnish with parsley. Serve with pasta, rice, or mashed potatoes.
 
 ## Notes
 
-- **Substitution:** You can use X instead of Y.
-- **Make Ahead:** This keeps well in the fridge for 3 days.
-- **Pro Tip:** Don't skip the step where you zest the lemon!
+- **Storage:** Airtight container in the fridge for up to 3 days.
+- **Reheat:** Warm on the stove over medium-low for 5-10 minutes. Add a splash of water if the sauce has thickened.
