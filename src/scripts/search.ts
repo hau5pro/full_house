@@ -24,6 +24,14 @@ const isMac = navigator.platform.toUpperCase().includes("MAC");
 const input = getInput();
 if (input) input.placeholder = isMac ? "⌘K" : "Ctrl+K";
 
+document.addEventListener("click", (e) => {
+  const link = (e.target as HTMLElement).closest<HTMLAnchorElement>(".pagefind-ui__result-link");
+  if (!link) return;
+  const clear = document.querySelector<HTMLButtonElement>(".pagefind-ui__search-clear");
+  if (clear) clear.click();
+  getInput()?.blur();
+});
+
 document.addEventListener("keydown", (e) => {
   const input = getInput();
   if (!input) return;
