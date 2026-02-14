@@ -11,6 +11,53 @@
 }
 
 /* =========================
+   TABLE OF CONTENTS
+   ========================= */
+.toc {
+  margin-bottom: var(--space-3xl);
+  background: var(--card-bg);
+  border: 1px solid var(--accent-muted);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-lg);
+}
+
+.toc ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.toc li + li::before {
+  content: '·';
+  color: var(--text-muted);
+  margin-right: var(--space-xs);
+}
+
+.toc a {
+  display: inline-block;
+  color: var(--accent);
+  background: var(--bg);
+  border: 1px solid var(--accent-muted);
+  border-radius: var(--border-radius-sm);
+  padding: 0.15em 0.6em;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: var(--text-sm);
+  transition: all var(--transition-fast);
+}
+
+.toc a:hover {
+  color: var(--accent-warm);
+  border-color: var(--accent-warm-muted);
+  background: var(--accent-warm-muted);
+  opacity: 1;
+}
+
+
+/* =========================
    CATEGORY SECTIONS
    ========================= */
 .category-section {
