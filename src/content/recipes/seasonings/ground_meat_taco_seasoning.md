@@ -2,7 +2,7 @@
 title: "Ground Meat Taco Seasoning"
 description: "Simple homemade taco seasoning."
 image: "opt-ground_meat_taco_seasoning.webp"
-tags: ["seasoning", "ground_beef", "ground_pork"]
+tags: ["seasoning", "mexican", "ground_beef", "ground_pork"]
 meta:
   prepTime: "5 min"
   servings: "6"
