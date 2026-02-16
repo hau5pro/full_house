@@ -56,6 +56,14 @@ const { Content } = await render(entry);
                 </div>
               )
             }
+            {
+              entry.data.meta.fermentTime && (
+                <div class="recipe-meta-item">
+                  <span class="meta-label">Ferment Time</span>
+                  <span class="meta-value">{entry.data.meta.fermentTime}</span>
+                </div>
+              )
+            }
           </div>
         )
       }

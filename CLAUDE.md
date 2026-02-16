@@ -43,7 +43,7 @@ nutrition:          # optional
   fat: "8g"
 ```
 
-- `meta` groups servings, prepTime, and cookTime
+- `meta` groups servings, prepTime, cookTime, and fermentTime
 - `nutrition` is optional, all other top-level fields are required (except description)
 - Images reference optimized filenames from the CDN (prefixed with `opt-`)
 - Never change the `image` field during audits — image names are managed manually

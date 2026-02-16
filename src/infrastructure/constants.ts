@@ -8,6 +8,7 @@ export const CATEGORY_ORDER = [
   "desserts",
   "drinks",
   "seasonings",
+  "doughs",
   "basics",
 ];
 
