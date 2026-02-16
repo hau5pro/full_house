@@ -1,4 +1,6 @@
 ---
+import { replaceFractions } from "../infrastructure/fractions.ts";
+
 interface Props {
   servingSize?: string;
   calories?: number;
@@ -8,6 +10,7 @@ interface Props {
 }
 
 const { servingSize, calories, protein, carbs, fat } = Astro.props;
+const formattedServingSize = servingSize ? replaceFractions(servingSize) : servingSize;
 ---
 
 <div class="nutrition-card">
@@ -15,7 +18,7 @@ const { servingSize, calories, protein, carbs, fat } = Astro.props;
   {servingSize && (
     <div class="nutrition-row nutrition-serving">
       <span>Serving size</span>
-      <span class="nutrition-serving-value">{servingSize}</span>
+      <span class="nutrition-serving-value">{formattedServingSize}</span>
     </div>
   )}
   {calories != null && (
