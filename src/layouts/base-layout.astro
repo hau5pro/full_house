@@ -52,28 +52,26 @@ const categories = sortCategories([
             </svg>
             <span class="logo-text">Full House</span>
           </a>
-          <div class="header-right">
-            <nav class="main-nav">
-              {
-                categories.map((category) => (
-                  <a href={`/#${category}`} class="cat-link">
-                    {category}
-                  </a>
-                ))
-              }
-            </nav>
-            <div class="header-search">
-              <Search
-                id="search"
-                className="pagefind-ui"
-                uiOptions={{
-                  showSubResults: false,
-                  showImages: true,
-                  showEmptyFilters: false,
-                  excerptLength: 20,
-                }}
-              />
-            </div>
+          <nav class="main-nav">
+            {
+              categories.map((category) => (
+                <a href={`/#${category}`} class="cat-link">
+                  {category}
+                </a>
+              ))
+            }
+          </nav>
+          <div class="header-search">
+            <Search
+              id="search"
+              className="pagefind-ui"
+              uiOptions={{
+                showSubResults: false,
+                showImages: true,
+                showEmptyFilters: false,
+                excerptLength: 20,
+              }}
+            />
           </div>
         </div>
       </div>

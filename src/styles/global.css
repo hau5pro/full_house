@@ -131,17 +131,13 @@ body {
   background-clip: text;
 }
 
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: var(--space-lg);
-}
-
 .main-nav {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-sm);
   align-items: center;
+  flex: 1;
+  min-width: 0;
 }
 
 .cat-link {
@@ -557,18 +553,6 @@ button:focus-visible {
 
   .logo-text {
     display: none;
-  }
-
-  .header-right {
-    flex-wrap: wrap;
-    flex: 1;
-    min-width: 0;
-    justify-content: flex-end;
-  }
-
-  .main-nav {
-    flex: 1;
-    min-width: 0;
   }
 
   .header-search {
