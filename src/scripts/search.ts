@@ -21,8 +21,15 @@ function setActive(results: HTMLElement[], index: number) {
 }
 
 const isMac = navigator.platform.toUpperCase().includes("MAC");
-const input = getInput();
-if (input) input.placeholder = isMac ? "⌘K" : "Ctrl+K";
+const hotkey = isMac ? "⌘K" : "Ctrl+K";
+
+function setPlaceholder() {
+  const input = getInput();
+  if (input) input.placeholder = hotkey;
+}
+
+setPlaceholder();
+document.addEventListener("astro:page-load", setPlaceholder);
 
 document.addEventListener("click", (e) => {
   const link = (e.target as HTMLElement).closest<HTMLAnchorElement>(".pagefind-ui__result-link");

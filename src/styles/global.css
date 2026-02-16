@@ -94,9 +94,9 @@ body {
 
 .header-content {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-xl);
+  gap: var(--space-sm) var(--space-xl);
 }
 
 .logo {
@@ -108,6 +108,8 @@ body {
   color: var(--text);
   text-decoration: none;
   transition: transform var(--transition-base);
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .logo:hover {
@@ -137,14 +139,9 @@ body {
 
 .main-nav {
   display: flex;
-  gap: var(--space-lg);
+  flex-wrap: wrap;
+  gap: var(--space-sm);
   align-items: center;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-
-.main-nav::-webkit-scrollbar {
-  display: none;
 }
 
 .cat-link {
@@ -331,11 +328,6 @@ a.tag-chip:hover {
   background: var(--bg);
   color: var(--text);
   width: 220px;
-  transition: width var(--transition-base);
-}
-
-.pagefind-ui .pagefind-ui__search-input:focus {
-  width: 320px;
 }
 
 .pagefind-ui .pagefind-ui__search-clear {
@@ -605,11 +597,6 @@ button:focus-visible {
   :root {
     --space-2xl: 2rem;
     --space-3xl: 2.5rem;
-  }
-
-  .main-nav {
-    flex-wrap: wrap;
-    gap: var(--space-sm);
   }
 
   .cat-link {
