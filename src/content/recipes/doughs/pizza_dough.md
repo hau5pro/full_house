@@ -1,6 +1,6 @@
 ---
 title: "Pizza Dough"
-description: "No mixer, minimal knead"
+description: "No mixer, minimal knead."
 image: "opt-pizza_dough.webp"
 tags: ["dough", "pizza"]
 meta:
