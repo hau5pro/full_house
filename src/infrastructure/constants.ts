@@ -5,6 +5,7 @@ export const CATEGORY_ORDER = [
   "sides",
   "sauces",
   "dips",
+  "snacks",
   "desserts",
   "drinks",
   "seasonings",

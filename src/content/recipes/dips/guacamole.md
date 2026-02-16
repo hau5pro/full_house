@@ -2,7 +2,7 @@
 title: "Guacamole"
 description: "Fresh, chunky guacamole with just the right kick of jalapeño and lime."
 image: "opt-guacamole.webp"
-tags: ["dip", "mexican", "avacado"]
+tags: ["dip", "mexican", "avocado"]
 meta:
   prepTime: "10 mins"
   servings: "6"

@@ -30,7 +30,7 @@ Personal cookbook built with Astro 5. Recipes are markdown files with structured
 title: "Recipe Name"
 description: "Short hook about the dish."
 image: "opt-filename.webp"
-tags: ["tag1", "tag2"]
+tags: ["tag1", "multi-word-tag"]
 meta:
   prepTime: "10 min"
   cookTime: "30 min"
@@ -57,6 +57,7 @@ nutrition:          # optional
 - Ingredients and Notes use unordered lists (`-`), Directions use ordered lists (`1.`)
 - Directions should be short and direct — no filler or over-explanation
 - Notes use bold labels (e.g. `**Storage:**`, `**Substitution:**`)
+- Tags are lowercase and use hyphens as delimiters (e.g. `hash-brown`, not `hash_brown` or `hashBrown`)
 - Check for spelling and grammar errors in all text (description, ingredients, directions, notes)
 
 ## Conventions
