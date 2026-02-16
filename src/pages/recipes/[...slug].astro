@@ -73,7 +73,7 @@ const { Content } = await render(entry);
       {
         entry.data.image && (
           <div class="recipe-img-wrapper">
-            <img src={imageUrl} alt={entry.data.title} class="recipe-img" data-pagefind-meta="image[src]" transition:name={`recipe-img-${entry.id.replace(/\//g, "-")}`} transition:animate="fade" />
+            <img src={imageUrl} alt={entry.data.title} class={`recipe-img${entry.data.portraitImage ? "" : " landscape"}`} data-pagefind-meta="image[src]" transition:name={`recipe-img-${entry.id.replace(/\//g, "-")}`} transition:animate="fade" />
           </div>
         )
       }

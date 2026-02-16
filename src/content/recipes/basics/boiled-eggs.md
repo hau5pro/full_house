@@ -2,6 +2,7 @@
 title: "Boiled Eggs"
 description: "Perfect soft or hard boiled eggs every time."
 image: "opt-boiled_eggs.webp"
+portraitImage: true
 meta:
   prepTime: "5 min"
   cookTime: "6-14 min"

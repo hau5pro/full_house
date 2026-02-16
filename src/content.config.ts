@@ -8,6 +8,7 @@ const recipes = defineCollection({
     title: z.string(),
     description: z.string().optional(),
     image: z.string(),
+    portraitImage: z.boolean().optional(),
     tags: z.array(z.string()).default([]),
     meta: z
       .object({

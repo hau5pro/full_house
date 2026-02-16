@@ -3,9 +3,9 @@ export const UNCATEGORIZED = "Uncategorized";
 export const CATEGORY_ORDER = [
   "mains",
   "sides",
+  "snacks",
   "sauces",
   "dips",
-  "snacks",
   "desserts",
   "drinks",
   "seasonings",
