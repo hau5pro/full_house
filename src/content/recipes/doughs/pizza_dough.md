@@ -8,7 +8,7 @@ meta:
   fermentTime: "90 min"
   servings: "4-7"
 nutrition:
-  servingSize: "1 dough ball (~163g)"
+  servingSize: "1 small ball (~163g)"
   calories: 393
   protein: "10g"
   carbs: "76g"
@@ -46,5 +46,6 @@ nutrition:
 
 ## Notes
 
+- **Make ahead:** Divide into pieces and refrigerate. Pull out 30 min before rolling.
 - **Storage:** Can freeze; defrost 1-2 hours at room temp before using.
 - **Cold ferment:** Refrigerate up to 3-4 days, then freeze.
