@@ -42,8 +42,8 @@ const categories = sortCategories(Object.keys(groupedRecipes));
       (() => {
         let cardIndex = 0;
         return categories.map((category) => (
-          <section id={category} class="category-section">
-            <h2 class="category-header">{category}</h2>
+          <section class="category-section">
+            <h2 id={category} class="category-header">{category}</h2>
             <ul class="recipe-grid">
               {groupedRecipes[category].map((recipe) => (
                 <li>
@@ -59,6 +59,19 @@ const categories = sortCategories(Object.keys(groupedRecipes));
 </BaseLayout>
 
 <script>
+  // Measure sticky header and set CSS variable for scroll offset
+  function syncHeaderHeight() {
+    const header = document.querySelector<HTMLElement>(".site-header");
+    if (header) {
+      document.documentElement.style.setProperty(
+        "--header-height",
+        `${header.offsetHeight}px`,
+      );
+    }
+  }
+  syncHeaderHeight();
+  window.addEventListener("resize", syncHeaderHeight);
+
   // Smooth scroll for nav links — delegated on persisted header, runs once
   document.querySelector(".main-nav")?.addEventListener("click", (e) => {
     const link = (e.target as Element).closest<HTMLAnchorElement>(".cat-link");
@@ -81,7 +94,7 @@ const categories = sortCategories(Object.keys(groupedRecipes));
     sectionObserver?.disconnect();
 
     const sections =
-      document.querySelectorAll<HTMLElement>(".category-section");
+      document.querySelectorAll<HTMLElement>(".category-header");
     if (sections.length === 0) return;
 
     const navLinks = document.querySelectorAll<HTMLAnchorElement>(".cat-link");
