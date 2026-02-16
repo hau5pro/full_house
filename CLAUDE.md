@@ -46,6 +46,7 @@ nutrition:          # optional
 - `meta` groups servings, prepTime, and cookTime
 - `nutrition` is optional, all other top-level fields are required (except description)
 - Images reference optimized filenames from the CDN (prefixed with `opt-`)
+- Never change the `image` field during audits — image names are managed manually
 
 ## Recipe Content
 
@@ -53,8 +54,10 @@ nutrition:          # optional
 - Ingredient names are italicized for amber accent (e.g. `- 1/2 cup *flour*`)
 - Use abbreviations for units (tsp, tbsp, oz, lb, g, kg, ml, L, qt, gal)
 - Sections follow the order: Ingredients, Directions, Notes
+- Ingredients and Notes use unordered lists (`-`), Directions use ordered lists (`1.`)
 - Directions should be short and direct — no filler or over-explanation
 - Notes use bold labels (e.g. `**Storage:**`, `**Substitution:**`)
+- Check for spelling and grammar errors in all text (description, ingredients, directions, notes)
 
 ## Conventions
 

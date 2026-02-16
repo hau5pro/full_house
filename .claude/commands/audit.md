@@ -5,6 +5,7 @@ Audit the recipe file at src/content/recipes/$ARGUMENTS against the CLAUDE.md co
 - description is a short hook, not generic filler
 - tags are relevant and lowercase
 - meta times are realistic for the recipe
+- Never change the image field
 
 ## Ingredients
 - All lowercase
@@ -23,8 +24,15 @@ Audit the recipe file at src/content/recipes/$ARGUMENTS against the CLAUDE.md co
 - Keep each note to 1-2 sentences max
 - Cut filler and redundancy
 
+## List formatting
+- Ingredients and Notes use unordered lists (`-`)
+- Directions use ordered lists (`1.`)
+
 ## Section order
 - Ingredients, Directions, Notes (in that order)
+
+## Spelling & grammar
+- Check all text for spelling and grammar errors (description, ingredients, directions, notes)
 
 ## Output
 For each issue found, show the original line and your suggested fix. Then apply all fixes to the file.
