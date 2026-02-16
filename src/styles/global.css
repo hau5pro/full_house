@@ -607,6 +607,11 @@ button:focus-visible {
     --space-3xl: 2.5rem;
   }
 
+  .main-nav {
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
   .cat-link {
     padding: var(--space-xs) var(--space-sm);
     font-size: var(--text-sm);

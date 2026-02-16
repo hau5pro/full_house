@@ -31,13 +31,6 @@ const categories = sortCategories(Object.keys(groupedRecipes));
   description="A personal cookbook with easy-to-follow recipes organized by category."
 >
   <div class="container">
-    <nav class="toc">
-      <ul>
-        {categories.map((category) => (
-          <li><a href={`#${category}`}>{category}</a></li>
-        ))}
-      </ul>
-    </nav>
     {
       (() => {
         let cardIndex = 0;
