@@ -57,6 +57,14 @@ const { Content } = await render(entry);
               )
             }
             {
+              entry.data.meta.marinadeTime && (
+                <div class="recipe-meta-item">
+                  <span class="meta-label">Marinade Time</span>
+                  <span class="meta-value">{entry.data.meta.marinadeTime}</span>
+                </div>
+              )
+            }
+            {
               entry.data.meta.cookTime && (
                 <div class="recipe-meta-item">
                   <span class="meta-label">Cook Time</span>

@@ -2,7 +2,7 @@
 title: "Mac and Cheese"
 description: "Creamy, sharp cheddar and gruyere sauce baked under a crispy panko crust."
 image: "opt-mac_and_cheese.webp"
-tags: ["mains", "cheese", "baked"]
+tags: ["main", "cheese", "baked"]
 meta:
   prepTime: "20 min"
   cookTime: "30 min"
