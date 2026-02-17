@@ -4,6 +4,7 @@ Audit the recipe file at src/content/recipes/$ARGUMENTS against the CLAUDE.md co
 - All required fields present (title, image, tags, meta)
 - description is a short hook, not generic filler
 - tags are relevant and lowercase — add missing tags but don't remove existing ones unless they're obvious placeholders
+- Don't use the category folder name as a tag (e.g. a recipe in `sides/` should not have a "side" or "sides" tag)
 - meta times are realistic for the recipe
 - Never change the image field
 
@@ -26,7 +27,7 @@ Audit the recipe file at src/content/recipes/$ARGUMENTS against the CLAUDE.md co
 
 ## List formatting
 - Ingredients and Notes use unordered lists (`-`)
-- Directions use ordered lists (`1.`)
+- Directions use ordered lists with ascending numbers (`1.`, `2.`, `3.`, etc.)
 
 ## Section order
 - Ingredients, Directions, Notes (in that order)
