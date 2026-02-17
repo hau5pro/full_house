@@ -23,6 +23,12 @@ const groupedRecipes = allRecipes.reduce(
   {},
 );
 
+for (const recipes of Object.values(groupedRecipes)) {
+  recipes.sort((a, b) =>
+    a.data.title.localeCompare(b.data.title),
+  );
+}
+
 const categories = sortCategories(Object.keys(groupedRecipes));
 ---
 
