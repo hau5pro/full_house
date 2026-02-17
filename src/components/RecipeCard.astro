@@ -32,21 +32,26 @@ const { recipe, priority = false } = Astro.props;
         </p>
       )}
       <TagChips tags={recipe.data.tags} limit={3} />
-      {recipe.data.meta && (recipe.data.meta.prepTime || recipe.data.meta.cookTime || recipe.data.meta.fermentTime) && (
+      {recipe.data.meta && (recipe.data.meta.prepTime || recipe.data.meta.cookTime || recipe.data.meta.fermentTime || recipe.data.meta.marinadeTime) && (
         <div class="recipe-card-meta">
           {recipe.data.meta.prepTime && (
             <span class="meta-item">
               Prep: {recipe.data.meta.prepTime}
             </span>
           )}
-          {recipe.data.meta.cookTime && (
+          {recipe.data.meta.marinadeTime && (
             <span class="meta-item">
-              Cook: {recipe.data.meta.cookTime}
+              Marinade: {recipe.data.meta.marinadeTime}
             </span>
           )}
           {recipe.data.meta.fermentTime && (
             <span class="meta-item">
               Ferment: {recipe.data.meta.fermentTime}
+            </span>
+          )}
+          {recipe.data.meta.cookTime && (
+            <span class="meta-item">
+              Cook: {recipe.data.meta.cookTime}
             </span>
           )}
         </div>
