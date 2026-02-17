@@ -22,9 +22,9 @@ meta:
 
 #### Pad See Ew
 
-- 3 tbsp _peanut oil_ (or vegetable oil)
-- 250 g dry _wide flat rice noodles_ (or 500 g fresh sen yai noodles)
-- 2 tbsp _peanut oil_ (or grapeseed oil)
+- 3 tbsp _peanut oil_ (or _vegetable oil_)
+- 250 g dry _wide flat rice noodles_ (or 500 g fresh _sen yai noodles_)
+- 2 tbsp _peanut oil_ (or _grapeseed oil_)
 - 5 _garlic_ cloves, minced
 - 4 stems _Chinese broccoli_ (gai lan), cut into bite-sized pieces
 - 2 _eggs_, whisked
