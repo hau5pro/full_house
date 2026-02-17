@@ -6,7 +6,7 @@ export const CATEGORY_ORDER = [
   "snacks",
   "sauces",
   "dips",
-  "desserts",
+  "sweets",
   "drinks",
   "seasonings",
   "doughs",
