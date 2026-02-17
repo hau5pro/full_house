@@ -49,18 +49,18 @@ const { Content } = await render(entry);
               )
             }
             {
-              entry.data.meta.cookTime && (
-                <div class="recipe-meta-item">
-                  <span class="meta-label">Cook Time</span>
-                  <span class="meta-value">{entry.data.meta.cookTime}</span>
-                </div>
-              )
-            }
-            {
               entry.data.meta.fermentTime && (
                 <div class="recipe-meta-item">
                   <span class="meta-label">Ferment Time</span>
                   <span class="meta-value">{entry.data.meta.fermentTime}</span>
+                </div>
+              )
+            }
+            {
+              entry.data.meta.cookTime && (
+                <div class="recipe-meta-item">
+                  <span class="meta-label">Cook Time</span>
+                  <span class="meta-value">{entry.data.meta.cookTime}</span>
                 </div>
               )
             }
