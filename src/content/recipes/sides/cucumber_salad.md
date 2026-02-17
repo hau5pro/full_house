@@ -2,7 +2,7 @@
 title: "Cucumber Salad (Oi Muchim)"
 description: "Crisp, tangy Korean cucumber salad in a soy-vinegar chili dressing."
 image: "opt-cucumber_salad.webp"
-tags: ["side", "korean", "cucumber"]
+tags: ["korean", "cucumber"]
 meta:
   prepTime: "4 min"
   marinadeTime: "15 min"

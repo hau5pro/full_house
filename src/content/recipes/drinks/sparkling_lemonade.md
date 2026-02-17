@@ -2,7 +2,7 @@
 title: "Sparkling Lemonade"
 description: "Bright, bubbly, and barely sweet."
 image: "opt-sparkling_lemonade.webp"
-tags: ["drink", "lemon"]
+tags: ["lemon"]
 meta:
   prepTime: "10 min"
   servings: "8"

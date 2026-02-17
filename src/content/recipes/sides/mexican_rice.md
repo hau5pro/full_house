@@ -2,7 +2,7 @@
 title: "Mexican Rice"
 description: "Fluffy, golden rice with tomato and spice — the perfect side."
 image: "opt-mexican_rice.webp"
-tags: ["side", "mexican", "rice"]
+tags: ["mexican", "rice"]
 meta:
   prepTime: "15 min"
   cookTime: "20 min"

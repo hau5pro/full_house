@@ -2,7 +2,7 @@
 title: "Dumpling Sauce"
 description: "Savory, tangy, and spicy — the perfect dip for dumplings."
 image: "opt-dumpling_sauce.webp"
-tags: ["sauce", "dumpling"]
+tags: ["dumpling"]
 meta:
   prepTime: "5 min"
   servings: "1"

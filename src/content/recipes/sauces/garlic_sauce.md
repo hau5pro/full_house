@@ -2,7 +2,7 @@
 title: "Garlic Sauce"
 description: "Creamy, garlicky, and bright — a yogurt based garlic sauce."
 image: "opt-garlic_sauce.webp"
-tags: ["sauce", "middle-eastern", "garlic"]
+tags: ["middle-eastern", "garlic"]
 meta:
   prepTime: "5 min"
   servings: "4"

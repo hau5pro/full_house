@@ -2,7 +2,7 @@
 title: "Beef Kofta Kebab"
 description: "Succulent and aromatic, these ground beef skewers are seasoned with fragrant spices and grilled to charred perfection."
 image: "opt-beef_kofta_kebab.webp"
-tags: ["main", "ground-beef"]
+tags: ["ground-beef"]
 meta:
   prepTime: "10 min"
   cookTime: "12 min"

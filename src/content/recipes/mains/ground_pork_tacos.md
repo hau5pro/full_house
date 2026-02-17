@@ -2,7 +2,7 @@
 title: "Ground Pork Tacos"
 description: "Crispy-edged seasoned pork in warm tortillas with all the fixings."
 image: "opt-ground_pork_taco.webp"
-tags: ["main", "mexican", "ground-pork", "ground-beef"]
+tags: ["mexican", "ground-pork", "ground-beef"]
 meta:
   prepTime: "15 min"
   cookTime: "10 min"

@@ -2,7 +2,7 @@
 title: "Beef Bulgogi"
 description: "Sweet and savory Korean grilled beef with a caramelized soy-sesame glaze."
 image: "opt-beef_bulgogi.webp"
-tags: ["main", "korean", "beef"]
+tags: ["korean", "beef"]
 meta:
   prepTime: "5 min"
   marinadeTime: "120 min"

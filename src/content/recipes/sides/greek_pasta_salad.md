@@ -2,7 +2,7 @@
 title: "Greek Pasta Salad"
 description: "A bright, tangy pasta salad loaded with fresh veggies and feta."
 image: "opt-greek_pasta_salad.webp"
-tags: ["side", "greek", "salad", "pasta"]
+tags: ["greek", "salad", "pasta"]
 meta:
   prepTime: "20 min"
   servings: "8"

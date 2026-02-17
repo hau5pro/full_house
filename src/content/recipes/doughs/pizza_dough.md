@@ -2,7 +2,7 @@
 title: "Pizza Dough"
 description: "No mixer, minimal knead."
 image: "opt-pizza_dough.webp"
-tags: ["dough", "pizza"]
+tags: ["pizza"]
 meta:
   prepTime: "20 min"
   fermentTime: "90 min"

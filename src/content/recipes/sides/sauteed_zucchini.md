@@ -2,7 +2,7 @@
 title: "Sauteed Zucchini"
 description: "Tender, golden zucchini rounds with parmesan and thyme."
 image: "opt-sauteed_zucchini.webp"
-tags: ["side", "zucchini"]
+tags: ["zucchini"]
 meta:
   prepTime: "10 min"
   cookTime: "25 min"

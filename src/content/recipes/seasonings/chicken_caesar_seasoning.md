@@ -2,7 +2,7 @@
 title: "Chicken Caesar Seasoning"
 description: "A quick all-purpose rub that nails that caesar flavor on chicken."
 image: "opt-chicken_ceaser_seasoning.webp"
-tags: ["seasoning", "chicken"]
+tags: ["chicken"]
 meta:
   prepTime: "5 min"
   servings: "2"

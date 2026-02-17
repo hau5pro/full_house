@@ -2,7 +2,7 @@
 title: "Basil Pesto"
 description: "A vibrant, nutty sauce that comes together in minutes."
 image: "opt-basil_pesto.webp"
-tags: ["sauce", "italian", "basil"]
+tags: ["italian", "basil"]
 meta:
   prepTime: "5 min"
   servings: "8"

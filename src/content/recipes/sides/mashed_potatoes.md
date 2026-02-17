@@ -2,7 +2,7 @@
 title: "Mashed Potatoes"
 description: "Creamy, buttery mashed potatoes with roasted garlic and cream cheese."
 image: "opt-mashed_potatoes.webp"
-tags: ["side", "potato"]
+tags: ["potato"]
 meta:
   prepTime: "20 min"
   cookTime: "25 min"

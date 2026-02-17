@@ -2,7 +2,7 @@
 title: "Rice Crispies"
 description: "Gooey, crunchy, and done in 15 minutes."
 image: "opt-rice_crispies.webp"
-tags: ["dessert"]
+tags: []
 meta:
   cookTime: "15 min"
   servings: "8"

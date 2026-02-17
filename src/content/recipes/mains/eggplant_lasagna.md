@@ -2,7 +2,7 @@
 title: "Eggplant Lasagna"
 description: "Layers of roasted eggplant, creamy ricotta, and melty mozzarella."
 image: "opt-eggplant_lasagna.webp"
-tags: ["main", "italian", "eggplant"]
+tags: ["italian", "eggplant"]
 meta:
   prepTime: "30 min"
   cookTime: "60 min"

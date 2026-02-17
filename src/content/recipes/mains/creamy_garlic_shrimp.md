@@ -2,7 +2,7 @@
 title: "Creamy Garlic Shrimp"
 description: "Rich, garlicky cream sauce over perfectly seared shrimp."
 image: "opt-creamy_garlic_shrimp.webp"
-tags: ["main", "italian", "shrimp"]
+tags: ["italian", "shrimp"]
 meta:
   prepTime: "5 min"
   cookTime: "10 min"

@@ -2,7 +2,7 @@
 title: "Avocado Hash Brown Toast"
 description: "Crispy hash browns topped with fresh guacamole and jalapeño."
 image: "opt-avacado_toast.webp"
-tags: ["breakfast", "snack", "hash-brown", "avocado"]
+tags: ["breakfast", "hash-brown", "avocado"]
 meta:
   prepTime: "2 min"
   cookTime: "20 min"
