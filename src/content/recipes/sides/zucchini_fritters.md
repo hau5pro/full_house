@@ -22,7 +22,7 @@ meta:
 - 3 tbsp _all-purpose flour_
 - _avocado oil_, for the pan
 - freshly ground _black pepper_
-- _tartar sauce_ or _creamy dill sauce_, for serving
+- _tartar sauce_ or [_creamy dill sauce_](/recipes/sauces/dill_sauce), for serving
 
 ## Directions
 
