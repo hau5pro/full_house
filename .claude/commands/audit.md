@@ -9,7 +9,7 @@ Audit the recipe file at src/content/recipes/$ARGUMENTS against the CLAUDE.md co
 
 ## Ingredients
 - All lowercase
-- Ingredient names italicized with *asterisks* (not underscores)
+- Ingredient names italicized with _underscores_ (not asterisks)
 - Quantities use fractions where appropriate
 - Units abbreviated (tsp, tbsp, oz, lb, g, kg, ml, L, qt, gal)
 

@@ -51,7 +51,7 @@ nutrition:          # optional
 ## Recipe Content
 
 - Ingredients are lowercase (e.g. `- 1/2 cup flour`, not `- 1/2 Cup Flour`)
-- Ingredient names are italicized for amber accent (e.g. `- 1/2 cup *flour*`)
+- Ingredient names are italicized for amber accent (e.g. `- 1/2 cup _flour_`)
 - Use abbreviations for units (tsp, tbsp, oz, lb, g, kg, ml, L, qt, gal)
 - Sections follow the order: Ingredients, Directions, Notes
 - Ingredients and Notes use unordered lists (`-`), Directions use ordered lists (`1.`)
