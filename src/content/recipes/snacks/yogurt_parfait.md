@@ -2,7 +2,7 @@
 title: "Yogurt Parfait"
 description: "A quick layered bowl of creamy yogurt, crunchy granola, and fresh fruit."
 image: "opt-yogurt_parfait.webp"
-tags: ["yogurt", "breakfast"]
+tags: ["breakfast", "yogurt"]
 meta:
   prepTime: "5 min"
   servings: "1"
