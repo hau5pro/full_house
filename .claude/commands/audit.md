@@ -3,7 +3,7 @@ Audit the recipe file at src/content/recipes/$ARGUMENTS against the CLAUDE.md co
 ## Frontmatter
 - All required fields present (title, image, tags, meta)
 - description is a short hook, not generic filler
-- tags are relevant and lowercase
+- tags are relevant and lowercase — add missing tags but don't remove existing ones unless they're obvious placeholders
 - meta times are realistic for the recipe
 - Never change the image field
 
