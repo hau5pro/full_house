@@ -2,7 +2,7 @@
 title: "Zucchini Fritters"
 description: "Golden and crispy with fresh dill — perfect with tartar sauce."
 image: "opt-zucchini_fritters.webp"
-tags: ["zucchini", "fritter", "vegetarian"]
+tags: ["vegetarian", "zucchini", "fritter"]
 meta:
   prepTime: "15 min"
   cookTime: "15 min"

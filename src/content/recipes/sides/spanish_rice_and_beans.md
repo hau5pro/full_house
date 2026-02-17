@@ -2,7 +2,7 @@
 title: "Spanish Rice and Beans"
 description: "One-pot Spanish-style rice with kidney beans, fire-roasted tomatoes, and a bright parsley oil drizzle."
 image: "opt-spanish_rice_and_beans.webp"
-tags: ["rice", "beans", "spanish", "one-pot"]
+tags: ["spanish", "rice", "beans", "one-pot"]
 meta:
   prepTime: "10 min"
   cookTime: "40 min"
