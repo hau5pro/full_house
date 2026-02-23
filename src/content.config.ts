@@ -28,6 +28,7 @@ const recipes = defineCollection({
         fat: z.string().optional(),
       })
       .optional(),
+    draft: z.boolean().optional(),
   }),
 });
 

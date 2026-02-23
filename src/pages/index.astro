@@ -5,8 +5,9 @@ import "./index.css";
 import "../styles/recipe-grid.css";
 import { UNCATEGORIZED, sortCategories } from "../infrastructure/constants";
 import RecipeCard from "../components/RecipeCard.astro";
+import { DISPLAY_DRAFTS } from "../config";
 
-const allRecipes = await getCollection("recipes");
+const allRecipes = (await getCollection("recipes")).filter((r => !r.data.draft || DISPLAY_DRAFTS));
 
 const groupedRecipes = allRecipes.reduce(
   (acc: Record<string, CollectionEntry<"recipes">[]>, recipe) => {
