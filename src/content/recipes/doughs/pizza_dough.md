@@ -21,7 +21,7 @@ nutrition:
 - 20g (1 1/2 tbsp) _extra virgin olive oil_
 - 7g (2 tsp) _instant yeast_
 - 15g (1 tbsp) _salt_
-- 20g (2 tbsp) _granulated sugar_
+- 20g (1 1/2 tbsp) _granulated sugar_
 - 680g (5 3/4 cup) _all-purpose flour_
 
 ## Directions
