@@ -8,7 +8,7 @@ meta:
   cookTime: "30 min"
   servings: "4"
 nutrition:
-  servingSize: "1 cup"
+  servingSize: "1 serving"
   calories: 200
   protein: "10g"
   carbs: "20g"
