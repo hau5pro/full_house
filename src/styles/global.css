@@ -96,7 +96,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-sm) var(--space-xl);
+  gap: 0 var(--space-xl);
 }
 
 .logo {
@@ -132,7 +132,7 @@ body {
 }
 
 .menu-toggle {
-  display: none;
+  display: flex;
   margin-left: auto;
   background: transparent;
   border: 1px solid var(--border);
@@ -181,15 +181,19 @@ body {
 }
 
 .header-menu {
-  display: flex;
-  flex: 1;
-  align-items: center;
-  gap: var(--space-xl);
-  min-width: 0;
+  flex: none;
+  flex-basis: 100%;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  transition: height var(--transition-slow);
 }
 
 .header-menu-inner {
-  display: contents;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-md) 0;
 }
 
 .main-nav {
@@ -197,8 +201,11 @@ body {
   flex-wrap: wrap;
   gap: var(--space-sm);
   align-items: center;
-  flex: 1;
-  min-width: 0;
+}
+
+.pagefind-ui .pagefind-ui__search-input,
+.pagefind-ui .pagefind-ui__search-input:focus {
+  width: 100%;
 }
 
 .cat-link {
@@ -616,38 +623,8 @@ button:focus-visible {
     display: none;
   }
 
-  .header-content {
-    row-gap: 0;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-
-  .header-menu {
-    flex: none;
-    flex-basis: 100%;
-    display: block;
-    padding-top: var(--space-sm);
-    height: 0;
-    overflow: hidden;
-    transition: height var(--transition-slow);
-  }
-
-  .header-menu-inner {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-md);
-    padding: var(--space-md) 0;
-  }
-
   .pagefind-ui {
     --pagefind-ui-scale: 0.65;
-  }
-
-  .pagefind-ui .pagefind-ui__search-input,
-  .pagefind-ui .pagefind-ui__search-input:focus {
-    width: 100%;
   }
 
   .pagefind-ui .pagefind-ui__drawer {
