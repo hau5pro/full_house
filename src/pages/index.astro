@@ -59,10 +59,10 @@ const categories = sortCategories(Object.keys(groupedRecipes));
 </BaseLayout>
 
 <script>
-  // Measure sticky header and set CSS variable for scroll offset
+  // Measure sticky header (closed state) and set CSS variable for scroll offset
   function syncHeaderHeight() {
     const header = document.querySelector<HTMLElement>(".site-header");
-    if (header) {
+    if (header && !header.classList.contains("menu-open")) {
       document.documentElement.style.setProperty(
         "--header-height",
         `${header.offsetHeight}px`,
@@ -82,10 +82,19 @@ const categories = sortCategories(Object.keys(groupedRecipes));
     const target = document.querySelector(hash);
     if (target) {
       e.preventDefault();
-      const header = document.querySelector<HTMLElement>(".site-header");
-      const offset = header ? header.offsetHeight : 0;
-      const top = target.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top, behavior: "smooth" });
+      const doScroll = () => {
+        syncHeaderHeight();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      };
+      // If the mobile menu is open, wait for it to finish closing so the
+      // layout shift doesn't displace the scroll target mid-animation.
+      const menu = document.querySelector<HTMLElement>(".header-menu");
+      const menuIsOpen = document.querySelector(".site-header")?.classList.contains("menu-open");
+      if (menuIsOpen && menu) {
+        menu.addEventListener("transitionend", doScroll, { once: true });
+      } else {
+        doScroll();
+      }
       history.pushState(null, "", hash);
     }
   });
@@ -94,6 +103,15 @@ const categories = sortCategories(Object.keys(groupedRecipes));
   let sectionObserver: IntersectionObserver | null = null;
 
   document.addEventListener("astro:page-load", () => {
+    syncHeaderHeight();
+
+    // When navigating from another page to /#category, Astro view transitions
+    // don't restore the hash scroll automatically — do it here.
+    if (location.hash) {
+      const target = document.querySelector(location.hash);
+      if (target) target.scrollIntoView({ block: "start" });
+    }
+
     sectionObserver?.disconnect();
 
     const sections =

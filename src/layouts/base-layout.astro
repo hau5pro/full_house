@@ -52,26 +52,37 @@ const categories = sortCategories([
             </svg>
             <span class="logo-text">Full House</span>
           </a>
-          <nav class="main-nav">
-            {
-              categories.map((category) => (
-                <a href={`/#${category}`} class="cat-link">
-                  {category}
-                </a>
-              ))
-            }
-          </nav>
-          <div class="header-search">
-            <Search
-              id="search"
-              className="pagefind-ui"
-              uiOptions={{
-                showSubResults: false,
-                showImages: true,
-                showEmptyFilters: false,
-                excerptLength: 20,
-              }}
-            />
+          <button class="menu-toggle" aria-expanded="false" aria-controls="header-menu" aria-label="Toggle navigation">
+            <svg class="menu-toggle-icon" viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <line class="burger-top" x1="0" y1="1" x2="18" y2="1" />
+              <line class="burger-mid" x1="0" y1="7" x2="18" y2="7" />
+              <line class="burger-bot" x1="0" y1="13" x2="18" y2="13" />
+            </svg>
+          </button>
+          <div class="header-menu" id="header-menu">
+            <div class="header-menu-inner">
+              <nav class="main-nav">
+                {
+                  categories.map((category) => (
+                    <a href={`/#${category}`} class="cat-link">
+                      {category}
+                    </a>
+                  ))
+                }
+              </nav>
+              <div class="header-search">
+                <Search
+                  id="search"
+                  className="pagefind-ui"
+                  uiOptions={{
+                    showSubResults: false,
+                    showImages: true,
+                    showEmptyFilters: false,
+                    excerptLength: 20,
+                  }}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -85,5 +96,6 @@ const categories = sortCategories([
       <p>Just recipes. You're welcome.</p>
     </footer>
     <script src="../scripts/search.ts"></script>
+    <script src="../scripts/menu.ts"></script>
   </body>
 </html>
