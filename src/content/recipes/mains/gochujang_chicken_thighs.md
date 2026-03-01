@@ -8,6 +8,12 @@ meta:
   marinadeTime: "30 min"
   cookTime: "15 min"
   servings: "4"
+nutrition:
+  servingSize: "1 serving (2 thighs)"
+  calories: 352
+  protein: "45g"
+  carbs: "13g"
+  fat: "13g"
 source: "https://carmyy.com/wprm_print/gochujang-chicken-thighs"
 draft: false
 ---
