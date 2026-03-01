@@ -7,6 +7,12 @@ meta:
   prepTime: "10 min"
   cookTime: "75 min"
   servings: "6-8"
+nutrition:
+  servingSize: "1 serving"
+  calories: 275
+  protein: "5g"
+  carbs: "46g"
+  fat: "9g"
 source: "https://www.seriouseats.com/the-best-roast-potatoes-ever-recipe"
 draft: false
 ---
