@@ -12,7 +12,7 @@ meta:
 
 - 3 _garlic_ cloves
 - 3/4 cup _mayonnaise_ (full-fat)
-- 2 tbsp plain _greek yogurt_
+- 2 tbsp plain _greek yogurt_ (or _regular yogurt_)
 - 2 tsp _lemon juice_, freshly squeezed
 - 1 tbsp _extra virgin olive oil_
 - 1/2 tsp _za'atar_ seasoning
