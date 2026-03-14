@@ -37,7 +37,7 @@ const { Content } = await render(entry);
           <div class="recipe-meta" data-pagefind-ignore>
             {
               entry.data.meta.servings && (
-                <div class="recipe-meta-item">
+                <div class="recipe-meta-item recipe-meta-item--compact">
                   <span class="meta-label">Servings</span>
                   <ServingsStepper servings={parseInt(entry.data.meta.servings)} />
                 </div>

@@ -42,7 +42,7 @@
 }
 
 .recipe-meta-item {
-  flex: 1 1 0;
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
@@ -51,6 +51,12 @@
   border: 1px solid var(--border);
   border-radius: var(--border-radius-sm);
   min-width: 120px;
+}
+
+.recipe-meta-item--compact {
+  flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .meta-label {

@@ -139,7 +139,9 @@ body {
   border-radius: var(--border-radius-sm);
   color: var(--text-muted);
   cursor: pointer;
-  padding: var(--space-sm);
+  padding: var(--space-md) var(--space-md);
+  min-width: 44px;
+  min-height: 44px;
   transition: all var(--transition-fast);
 }
 
@@ -213,6 +215,9 @@ body {
   font-size: var(--text-base);
   font-weight: 500;
   padding: var(--space-sm) var(--space-md);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
   border-radius: var(--border-radius-sm);
   transition: all var(--transition-fast);
   position: relative;
@@ -393,7 +398,7 @@ footer p::after {
   background: var(--card-bg);
   border: 1px solid var(--accent-warm-muted);
   border-radius: var(--border-radius-sm);
-  padding: 0.15em 0.6em;
+  padding: 0.5em 0.8em;
   letter-spacing: 0.03em;
 }
 

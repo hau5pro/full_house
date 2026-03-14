@@ -8,32 +8,35 @@ const { servings } = Astro.props;
 
 <div class="servings-stepper" data-original={servings} data-current={servings}>
   <button class="stepper-btn" data-dir="-1" aria-label="Decrease servings">−</button>
-  <span class="stepper-value meta-value">{servings}</span>
+  <span class="stepper-value meta-value stepper-number" aria-label="Current servings">{servings}</span>
   <button class="stepper-btn" data-dir="1" aria-label="Increase servings">+</button>
 </div>
 
 <style>
   .servings-stepper {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: var(--space-sm);
+    gap: var(--space-xs);
+    border: 1px solid var(--accent-warm-muted);
+    border-radius: var(--border-radius-md);
+    padding: var(--space-xs);
   }
 
   .stepper-btn {
-    width: 22px;
-    height: 22px;
+    width: 44px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: transparent;
-    border: 1px solid var(--accent-warm-muted);
+    border: none;
     border-radius: var(--border-radius-sm);
     color: var(--accent-warm);
-    font-size: var(--text-base);
+    font-size: var(--text-xl);
     line-height: 1;
     cursor: pointer;
     flex-shrink: 0;
-    transition: all var(--transition-fast);
+    transition: background var(--transition-fast), color var(--transition-fast);
   }
 
   .stepper-btn:hover {
@@ -45,5 +48,11 @@ const { servings } = Astro.props;
     opacity: 0.25;
     cursor: not-allowed;
     pointer-events: none;
+  }
+
+  .stepper-number {
+    font-size: var(--text-xl);
+    min-width: 2.5ch;
+    text-align: center;
   }
 </style>
