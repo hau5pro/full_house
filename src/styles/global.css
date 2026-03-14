@@ -231,21 +231,22 @@ body {
   opacity: 1;
 }
 
-.cat-link::after {
+.cat-link::before {
   content: '';
   position: absolute;
-  bottom: -4px;
-  left: 50%;
-  transform: translateX(-50%) scaleX(0);
-  width: 80%;
-  height: 2px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) scaleY(0);
+  width: 3px;
+  height: 60%;
   background: var(--accent);
+  border-radius: 2px;
   transition: transform var(--transition-base);
 }
 
-.cat-link:hover::after,
-.cat-link.active::after {
-  transform: translateX(-50%) scaleX(1);
+.cat-link:hover::before,
+.cat-link.active::before {
+  transform: translateY(-50%) scaleY(1);
 }
 
 .cat-link.active {
@@ -446,6 +447,11 @@ a.tag-chip:hover {
   width: 220px;
 }
 
+.pagefind-ui .pagefind-ui__search-input:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
 .pagefind-ui .pagefind-ui__search-clear {
   color: var(--text-muted);
 }
@@ -453,7 +459,7 @@ a.tag-chip:hover {
 .pagefind-ui .pagefind-ui__drawer {
   position: absolute;
   top: 100%;
-  right: 0;
+  left: 0;
   z-index: 200;
   background: var(--card-bg);
   border: 1px solid var(--border);
