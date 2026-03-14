@@ -6,7 +6,7 @@ tags: ["potato"]
 meta:
   prepTime: "20 min"
   cookTime: "25 min"
-  servings: "10-12"
+  servings: "12"
 nutrition:
   servingSize: "1 cup"
   calories: 265

@@ -6,7 +6,7 @@ tags: ["vegetarian", "gluten-free", "potato", "roasted"]
 meta:
   prepTime: "10 min"
   cookTime: "75 min"
-  servings: "6-8"
+  servings: "6"
 nutrition:
   servingSize: "1 serving"
   calories: 275

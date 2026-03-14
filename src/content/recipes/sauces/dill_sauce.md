@@ -5,7 +5,7 @@ image: "opt-dill_sauce.webp"
 tags: ["dill", "yogurt", "condiment"]
 meta:
   prepTime: "5 min"
-  servings: "4-6"
+  servings: "6"
 ---
 
 ## Ingredients

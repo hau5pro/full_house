@@ -6,7 +6,7 @@ tags: ["pizza"]
 meta:
   prepTime: "20 min"
   fermentTime: "90 min"
-  servings: "4-7"
+  servings: "7"
 nutrition:
   servingSize: "1 small ball (~163g)"
   calories: 393
@@ -38,7 +38,7 @@ nutrition:
 
 6. Turn the dough out onto a lightly floured surface.
 
-7. Divide into 4 large (~280g) or 7 small (~163g) equal pieces.
+7. Divide into 7 equal pieces (~163g each).
 
 8. Shape each piece by folding the sides inward, rotate 90 degrees and repeat, then flip and roll into a ball.
 

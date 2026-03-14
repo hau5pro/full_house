@@ -6,7 +6,7 @@ tags: ["vegetarian", "chocolate", "cupcakes", "baking"]
 meta:
   prepTime: "15 min"
   cookTime: "20 min"
-  servings: "12-14"
+  servings: "12"
 source: "https://sallysbakingaddiction.com/super-moist-chocolate-cupcakes/print/122908/"
 draft: false
 ---
