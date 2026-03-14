@@ -32,6 +32,17 @@ const { Content } = await render(entry);
           <p class="recipe-description" data-pagefind-weight="3">{entry.data.description}</p>
         )
       }
+      <div data-pagefind-weight="5">
+        <TagChips tags={entry.data.tags} linked />
+      </div>
+      {
+        entry.data.image && (
+          <div class="recipe-img-wrapper">
+            <img src={imageUrl} alt={entry.data.title} class={`recipe-img${entry.data.portraitImage ? "" : " landscape"}`} data-pagefind-meta="image[src]" transition:name={`recipe-img-${entry.id.replace(/\//g, "-")}`} transition:animate="fade" />
+            {entry.data.meta?.authentic && <Badge icon="★" tooltip="Authentic recipe" />}
+          </div>
+        )
+      }
       {
         entry.data.meta && (
           <div class="recipe-meta" data-pagefind-ignore>
@@ -44,17 +55,6 @@ const { Content } = await render(entry);
               )
             }
             <TotalTime {...entry.data.meta} />
-          </div>
-        )
-      }
-      <div data-pagefind-weight="5">
-        <TagChips tags={entry.data.tags} linked />
-      </div>
-      {
-        entry.data.image && (
-          <div class="recipe-img-wrapper">
-            <img src={imageUrl} alt={entry.data.title} class={`recipe-img${entry.data.portraitImage ? "" : " landscape"}`} data-pagefind-meta="image[src]" transition:name={`recipe-img-${entry.id.replace(/\//g, "-")}`} transition:animate="fade" />
-            {entry.data.meta?.authentic && <Badge icon="★" tooltip="Authentic recipe" />}
           </div>
         )
       }
