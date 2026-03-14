@@ -53,9 +53,14 @@ nutrition:          # optional
 - Ingredients are lowercase (e.g. `- 1/2 cup flour`, not `- 1/2 Cup Flour`)
 - Ingredient names are italicized for amber accent (e.g. `- 1/2 cup _flour_`)
 - Use abbreviations for units (tsp, tbsp, oz, lb, g, kg, ml, L, qt, gal)
+- Prep state belongs in the ingredient line (e.g. `2 cloves _garlic_, minced`), not buried in directions
+- Proteins and produce with variable quantity should use weight (e.g. `1.5 lb _chicken breast_` not `2 _chicken breasts_`)
+- Baking recipes should include gram weights for dry ingredients, alongside or instead of volume (e.g. `1 cup (120g) _flour_`)
 - Sections follow the order: Ingredients, Directions, Notes
 - Ingredients and Notes use unordered lists (`-`), Directions use ordered lists (`1.`)
 - Directions should be short and direct — no filler or over-explanation
+- Direction steps that are timer-only should include a visual or tactile cue (e.g. "cook 5 minutes, until golden at the edges")
+- Use precise technique verbs: mix, fold, whisk, and stir are not interchangeable
 - Notes use bold labels (e.g. `**Storage:**`, `**Substitution:**`)
 - Tags are lowercase and use hyphens as delimiters (e.g. `hash-brown`, not `hash_brown` or `hashBrown`)
 - Check for spelling and grammar errors in all text (description, ingredients, directions, notes)

@@ -16,12 +16,17 @@ Audit the recipe file at src/content/recipes/$ARGUMENTS against the CLAUDE.md co
 - Substitute/optional ingredient names inside parentheses are also italicized (e.g. `(or _vegetable oil_)`, `(sub 1 cup jarred _salsa_)`)
 - Quantities use fractions where appropriate
 - Units abbreviated (tsp, tbsp, oz, lb, g, kg, ml, L, qt, gal)
+- Prep state must be declared in the ingredient line, not discovered mid-directions (e.g. `2 cloves _garlic_, minced` — not "mince the garlic" in step 1 with plain `2 cloves _garlic_` in the list)
+- Proteins and produce where quantity varies should use weight over count (e.g. `1.5 lb _chicken breast_` not `2 _chicken breasts_`)
+- Baking recipes (tagged `baking` or `bread`) should use gram weights for dry ingredients, either exclusively or alongside volume (e.g. `1 cup (120g) _flour_`)
 
 ## Directions
 - Short and direct — no filler words or over-explanation
 - Each step is one clear action
 - No "your", "you should", "you want to", or similar padding
 - Rewrite any wordy steps to be concise
+- Steps that only give a time with no visual or tactile cue should be flagged — add what to look for (e.g. "cook 5 minutes, until golden at the edges" not just "cook 5 minutes")
+- Use precise technique verbs: mix, fold, whisk, and stir are not interchangeable
 
 ## Notes
 - Use bold labels (e.g. **Storage:**)
