@@ -11,11 +11,11 @@
     "optimize": "tsx scripts/optimize-images.ts"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.0",
+    "@astrojs/sitemap": "^3.7.1",
     "@fontsource/boogaloo": "^5.2.8",
     "@fontsource/inter": "^5.2.8",
     "@fontsource/jetbrains-mono": "^5.2.8",
-    "astro": "^5.17.1",
+    "astro": "^6.0.4",
     "astro-pagefind": "^1.8.5"
   },
   "devDependencies": {
