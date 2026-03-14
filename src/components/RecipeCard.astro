@@ -3,6 +3,7 @@ import type { CollectionEntry } from "astro:content";
 import { CDN_BASE } from "../config";
 import TagChips from "./TagChips.astro";
 import Badge from "./Badge.astro";
+import { totalTime } from "../infrastructure/time.ts";
 
 interface Props {
   recipe: CollectionEntry<"recipes">;
@@ -10,6 +11,7 @@ interface Props {
 }
 
 const { recipe, priority = false } = Astro.props;
+const total = totalTime(recipe.data.meta);
 ---
 
 <a href={`/recipes/${recipe.id}`} class="recipe-card-link" aria-label={`View recipe: ${recipe.data.title}`}>
@@ -36,28 +38,9 @@ const { recipe, priority = false } = Astro.props;
         </p>
       )}
       <TagChips tags={recipe.data.tags} limit={3} />
-      {recipe.data.meta && (recipe.data.meta.prepTime || recipe.data.meta.cookTime || recipe.data.meta.fermentTime || recipe.data.meta.marinadeTime) && (
+      {total && (
         <div class="recipe-card-meta">
-          {recipe.data.meta.prepTime && (
-            <span class="meta-item">
-              Prep: {recipe.data.meta.prepTime}
-            </span>
-          )}
-          {recipe.data.meta.marinadeTime && (
-            <span class="meta-item">
-              Marinade: {recipe.data.meta.marinadeTime}
-            </span>
-          )}
-          {recipe.data.meta.fermentTime && (
-            <span class="meta-item">
-              Ferment: {recipe.data.meta.fermentTime}
-            </span>
-          )}
-          {recipe.data.meta.cookTime && (
-            <span class="meta-item">
-              Cook: {recipe.data.meta.cookTime}
-            </span>
-          )}
+          <span class="meta-item">Total: {total}</span>
         </div>
       )}
     </div>

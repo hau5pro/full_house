@@ -16,6 +16,7 @@ const recipes = defineCollection({
         cookTime: z.string().optional(),
         fermentTime: z.string().optional(),
         marinadeTime: z.string().optional(),
+        coolingTime: z.string().optional(),
         servings: z.string().optional(),
         authentic: z.boolean().optional(),
       })

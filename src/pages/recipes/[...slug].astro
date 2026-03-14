@@ -5,6 +5,7 @@ import BaseLayout from "../../layouts/base-layout.astro";
 import TagChips from "../../components/TagChips.astro";
 import NutritionCard from "../../components/NutritionCard.astro";
 import Badge from "../../components/Badge.astro";
+import TotalTime from "../../components/TotalTime.astro";
 import "../../styles/recipe.css";
 
 export async function getStaticPaths() {
@@ -41,38 +42,7 @@ const { Content } = await render(entry);
                 </div>
               )
             }
-            {
-              entry.data.meta.prepTime && (
-                <div class="recipe-meta-item">
-                  <span class="meta-label">Prep Time</span>
-                  <span class="meta-value">{entry.data.meta.prepTime}</span>
-                </div>
-              )
-            }
-            {
-              entry.data.meta.fermentTime && (
-                <div class="recipe-meta-item">
-                  <span class="meta-label">Ferment Time</span>
-                  <span class="meta-value">{entry.data.meta.fermentTime}</span>
-                </div>
-              )
-            }
-            {
-              entry.data.meta.marinadeTime && (
-                <div class="recipe-meta-item">
-                  <span class="meta-label">Marinade Time</span>
-                  <span class="meta-value">{entry.data.meta.marinadeTime}</span>
-                </div>
-              )
-            }
-            {
-              entry.data.meta.cookTime && (
-                <div class="recipe-meta-item">
-                  <span class="meta-label">Cook Time</span>
-                  <span class="meta-value">{entry.data.meta.cookTime}</span>
-                </div>
-              )
-            }
+            <TotalTime {...entry.data.meta} />
           </div>
         )
       }

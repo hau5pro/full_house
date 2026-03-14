@@ -1,0 +1,43 @@
+---
+import { parseMinutes, formatDuration } from "../infrastructure/time.ts";
+
+interface Props {
+  prepTime?: string;
+  cookTime?: string;
+  fermentTime?: string;
+  marinadeTime?: string;
+  coolingTime?: string;
+}
+
+const { prepTime, cookTime, fermentTime, marinadeTime, coolingTime } = Astro.props;
+
+const timeParts = [
+  { label: "Prep", value: prepTime },
+  { label: "Ferment", value: fermentTime },
+  { label: "Marinade", value: marinadeTime },
+  { label: "Cook", value: cookTime },
+  { label: "Cooling", value: coolingTime },
+].filter((t): t is { label: string; value: string } => !!t.value);
+
+const totalMinutes = timeParts.reduce((sum, t) => sum + parseMinutes(t.value), 0);
+const totalFormatted = totalMinutes > 0 ? formatDuration(totalMinutes) : null;
+---
+
+{totalFormatted && (
+  <div class="recipe-meta-item">
+    <div class="meta-time-row">
+      <span class="meta-label">Total Time</span>
+      <span class="meta-value">{totalFormatted}</span>
+    </div>
+    {timeParts.length > 1 && (
+      <div class="meta-time-breakdown">
+        {timeParts.map((t) => (
+          <div class="meta-time-row">
+            <span class="meta-time-label">{t.label}</span>
+            <span class="meta-time-value">{t.value}</span>
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
+)}
