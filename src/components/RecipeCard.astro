@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import { CDN_BASE } from "../config";
 import TagChips from "./TagChips.astro";
+import Badge from "./Badge.astro";
 
 interface Props {
   recipe: CollectionEntry<"recipes">;
@@ -24,7 +25,7 @@ const { recipe, priority = false } = Astro.props;
           transition:name={`recipe-img-${recipe.id.replace(/\//g, "-")}`}
           transition:animate="fade"
         />
-        {recipe.data.meta?.authentic && <span class="authentic-badge">★</span>}
+        {recipe.data.meta?.authentic && <Badge icon="★" tooltip="Authentic recipe" />}
       </div>
     )}
     <div class="recipe-card-content">

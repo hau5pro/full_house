@@ -4,6 +4,7 @@ import { CDN_BASE } from "../../config";
 import BaseLayout from "../../layouts/base-layout.astro";
 import TagChips from "../../components/TagChips.astro";
 import NutritionCard from "../../components/NutritionCard.astro";
+import Badge from "../../components/Badge.astro";
 import "../../styles/recipe.css";
 
 export async function getStaticPaths() {
@@ -82,7 +83,7 @@ const { Content } = await render(entry);
         entry.data.image && (
           <div class="recipe-img-wrapper">
             <img src={imageUrl} alt={entry.data.title} class={`recipe-img${entry.data.portraitImage ? "" : " landscape"}`} data-pagefind-meta="image[src]" transition:name={`recipe-img-${entry.id.replace(/\//g, "-")}`} transition:animate="fade" />
-            {entry.data.meta?.authentic && <span class="authentic-badge">★</span>}
+            {entry.data.meta?.authentic && <Badge icon="★" tooltip="Authentic recipe" />}
           </div>
         )
       }

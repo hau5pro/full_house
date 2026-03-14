@@ -337,7 +337,7 @@ footer p::after {
   position: relative;
 }
 
-.authentic-badge {
+.icon-badge {
   position: absolute;
   top: var(--space-sm);
   left: var(--space-sm);
@@ -348,19 +348,18 @@ footer p::after {
   justify-content: center;
   font-size: var(--text-sm);
   color: var(--bg);
-  background: var(--accent-warm);
+  background: var(--badge-color, var(--accent-warm));
   border-radius: 50%;
   box-shadow: var(--shadow-md);
   line-height: 1;
   cursor: default;
+  z-index: 1;
 }
 
-.authentic-badge::after {
-  content: 'Authentic recipe';
+.icon-badge-tooltip {
   position: absolute;
-  bottom: calc(100% + var(--space-xs));
-  left: 50%;
-  transform: translateX(-50%);
+  top: calc(100% + var(--space-xs));
+  left: 0;
   background: var(--card-bg);
   color: var(--text);
   font-size: var(--text-xs);
@@ -374,7 +373,7 @@ footer p::after {
   transition: opacity var(--transition-fast);
 }
 
-.authentic-badge:hover::after {
+.icon-badge:hover .icon-badge-tooltip {
   opacity: 1;
 }
 
