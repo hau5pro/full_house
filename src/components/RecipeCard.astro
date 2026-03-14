@@ -14,15 +14,18 @@ const { recipe, priority = false } = Astro.props;
 <a href={`/recipes/${recipe.id}`} class="recipe-card-link" aria-label={`View recipe: ${recipe.data.title}`}>
   <article class="recipe-card">
     {recipe.data.image && (
-      <img
-        src={`${CDN_BASE}/${recipe.data.image}`}
-        alt={recipe.data.title}
-        class="recipe-card-image"
-        loading={priority ? "eager" : "lazy"}
-        fetchpriority={priority ? "high" : "auto"}
-        transition:name={`recipe-img-${recipe.id.replace(/\//g, "-")}`}
-        transition:animate="fade"
-      />
+      <div class="recipe-card-img-wrapper">
+        <img
+          src={`${CDN_BASE}/${recipe.data.image}`}
+          alt={recipe.data.title}
+          class="recipe-card-image"
+          loading={priority ? "eager" : "lazy"}
+          fetchpriority={priority ? "high" : "auto"}
+          transition:name={`recipe-img-${recipe.id.replace(/\//g, "-")}`}
+          transition:animate="fade"
+        />
+        {recipe.data.meta?.authentic && <span class="authentic-badge">★</span>}
+      </div>
     )}
     <div class="recipe-card-content">
       <h3 class="recipe-card-title" transition:name={`recipe-title-${recipe.id.replace(/\//g, "-")}`}>{recipe.data.title}</h3>

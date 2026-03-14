@@ -7,6 +7,7 @@ meta:
   prepTime: "15 min"
   cookTime: "30 min"
   servings: "4"
+  authentic: false
 nutrition:
   servingSize: "1 serving"
   calories: 200

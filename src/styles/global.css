@@ -331,6 +331,54 @@ footer p::after {
 }
 
 /* =========================
+   AUTHENTIC BADGE
+   ========================= */
+.recipe-img-wrapper {
+  position: relative;
+}
+
+.authentic-badge {
+  position: absolute;
+  top: var(--space-sm);
+  left: var(--space-sm);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-sm);
+  color: var(--bg);
+  background: var(--accent-warm);
+  border-radius: 50%;
+  box-shadow: var(--shadow-md);
+  line-height: 1;
+  cursor: default;
+}
+
+.authentic-badge::after {
+  content: 'Authentic recipe';
+  position: absolute;
+  bottom: calc(100% + var(--space-xs));
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--card-bg);
+  color: var(--text);
+  font-size: var(--text-xs);
+  font-family: 'JetBrains Mono', monospace;
+  white-space: nowrap;
+  padding: 0.25em 0.6em;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--border);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.authentic-badge:hover::after {
+  opacity: 1;
+}
+
+/* =========================
    TAG CHIPS
    ========================= */
 .recipe-tags {
