@@ -30,12 +30,12 @@ nutrition:
 ## Directions
 
 1. **Cut the potatoes.** Peel if desired, cut into even 1-inch chunks, and transfer to a large stockpot of cold water.
-1. **Boil the potatoes.** Add enough cold water to cover by 1 inch. Stir in garlic and 1 tbsp sea salt. Bring to a boil over high heat, reduce to medium-high, and cook 10-12 min until a knife slides through with no resistance. Drain completely.
-1. **Melt the butter mixture.** Heat butter, milk, and 2 tsp sea salt in a small saucepan or microwave until butter just melts. Don't boil the milk. Set aside.
-1. **Pan-dry the potatoes.** Return drained potatoes to the hot stockpot on the burner over low heat. Shake gently for about 1 min to steam off excess moisture. Remove from heat.
-1. **Mash the potatoes.** Mash to desired consistency with a potato masher or ricer.
-1. **Stir everything together.** Fold in half the butter mixture with a wooden spoon until absorbed. Repeat with remaining butter, then fold in cream cheese until just combined. Add more warm milk if needed.
-1. **Season and serve.** Taste and adjust salt. Serve warm with gravy or desired toppings.
+2. **Boil the potatoes.** Add enough cold water to cover by 1 inch. Stir in garlic and 1 tbsp sea salt. Bring to a boil over high heat, reduce to medium-high, and cook 10-12 min until a knife slides through with no resistance. Drain completely.
+3. **Melt the butter mixture.** Heat butter, milk, and 2 tsp sea salt in a small saucepan or microwave until butter just melts. Don't boil the milk. Set aside.
+4. **Pan-dry the potatoes.** Return drained potatoes to the hot stockpot on the burner over low heat. Shake gently for about 1 min to steam off excess moisture. Remove from heat.
+5. **Mash the potatoes.** Mash to desired consistency with a potato masher or ricer.
+6. **Stir everything together.** Fold in half the butter mixture with a wooden spoon until absorbed. Repeat with remaining butter, then fold in cream cheese until just combined. Add more warm milk if needed.
+7. **Season and serve.** Taste and adjust salt. Serve warm with gravy or desired toppings.
 
 ## Notes
 

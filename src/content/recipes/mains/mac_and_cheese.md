@@ -28,7 +28,7 @@ nutrition:
 - 1 1/2 cups _panko crumbs_
 - 4 tbsp _butter_, melted
 - 1/2 cup _parmesan cheese_, shredded
-- 1/4 tsp _smoked paprika_ (or regular paprika)
+- 1/4 tsp _smoked paprika_ (or _regular paprika_)
 
 ## Directions
 

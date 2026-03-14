@@ -25,7 +25,7 @@ draft: false
 - _oil_ for frying
 - 1/2 cup _mayonnaise_
 - 1/4 cup _sweet chili sauce_
-- 1/2 tsp _Sriracha_
+- 1/2 tsp _sriracha_
 - minced _chives_ and _salad greens_ for serving (optional)
 
 ## Directions

@@ -20,7 +20,7 @@ nutrition:
 - 1 tsp _olive oil_
 - 1 lb _ground pork_ (or _ground beef_)
 - 1-2 tbsp [_taco seasoning_](/recipes/seasonings/ground_meat_taco_seasoning)
-- 1/4 cup _water_ (can substitute broth)
+- 1/4 cup _water_ (can substitute _broth_)
 - _salt_ to taste
 - 8 _flour or corn tortillas_
 

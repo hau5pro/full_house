@@ -28,4 +28,4 @@ meta:
 
 ## Notes
 
-**Substitution:** Use 1/2 cup sugar instead of agave — dissolve it in 1/2 cup warm water first to make a simple syrup, then cool before adding.
+- **Substitution:** Use 1/2 cup sugar instead of agave — dissolve it in 1/2 cup warm water first to make a simple syrup, then cool before adding.

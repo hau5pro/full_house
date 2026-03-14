@@ -22,7 +22,7 @@ draft: false
 
 **Dry Mix**
 
-- 3½ cups _bread flour_
+- 3½ cups (420g) _bread flour_
 - 1½ tsp _kosher salt_
 - 2 cups _cheddar cheese_, shredded
 - 1 _jalapeño_, diced

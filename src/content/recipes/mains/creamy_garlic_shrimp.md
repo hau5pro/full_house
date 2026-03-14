@@ -25,7 +25,7 @@ nutrition:
 - 2 tbsp _white wine_
 - 1 1/2 cups _heavy cream_
 - 1 tsp _italian seasoning_
-- 1/2 cup _white cheddar_, shredded (or grated parmesan)
+- 1/2 cup _white cheddar_, shredded (or grated _parmesan_)
 - 1 tbsp fresh _parsley_, finely chopped
 
 ## Directions

@@ -4,7 +4,7 @@ description: "Fresh, chunky guacamole with just the right kick of jalapeño and 
 image: "opt-guacamole.webp"
 tags: ["mexican", "avocado"]
 meta:
-  prepTime: "10 mins"
+  prepTime: "10 min"
   servings: "6"
 nutrition:
   calories: 217
@@ -20,7 +20,7 @@ nutrition:
 - 1/4 cup chopped fresh _cilantro_, plus more for serving
 - 1/4 cup small white or red _onion_, finely chopped
 - juice of 1 _lime_
-- 1/2 teaspoon (or more) _kosher salt_
+- 1/2 tsp (or more) _kosher salt_
 - _tortilla chips_, for serving (optional)
 
 ## Directions

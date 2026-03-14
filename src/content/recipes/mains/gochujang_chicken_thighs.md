@@ -20,7 +20,7 @@ draft: false
 
 ## Ingredients
 
-- 8–10 _boneless, skinless chicken thighs_
+- 2 lb (8–10) _boneless, skinless chicken thighs_
 - 3–4 tbsp _gochujang_
 - 1 tsp _gochugaru_ (Korean hot pepper powder)
 - 2 1/2 tbsp _brown sugar_

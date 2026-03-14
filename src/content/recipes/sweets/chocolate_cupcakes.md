@@ -13,15 +13,15 @@ draft: false
 
 ## Ingredients
 
-- 3/4 cup _all-purpose flour_, spooned & leveled
-- 1/2 cup _unsweetened natural cocoa powder_
+- 3/4 cup (90g) _all-purpose flour_, spooned & leveled
+- 1/2 cup (42g) _unsweetened natural cocoa powder_
 - 1 tsp _espresso powder_
 - 3/4 tsp _baking powder_
 - 1/2 tsp _baking soda_
 - 1/4 tsp _salt_
 - 2 large _eggs_, room temperature
-- 1/2 cup _granulated sugar_
-- 1/2 cup _packed light brown sugar_
+- 1/2 cup (100g) _granulated sugar_
+- 1/2 cup (100g) _packed light brown sugar_
 - 1/3 cup _vegetable oil_ (or _canola oil_ or _melted coconut oil_)
 - 2 tsp _pure vanilla extract_
 - 1/2 cup _buttermilk_, room temperature

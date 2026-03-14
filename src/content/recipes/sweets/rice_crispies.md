@@ -37,4 +37,4 @@ meta:
 
 ## Notes
 
-**Tip:** Grease the spatula before pressing — butter wrapper or waxed paper works too.
+- **Tip:** Grease the spatula before pressing — butter wrapper or waxed paper works too.

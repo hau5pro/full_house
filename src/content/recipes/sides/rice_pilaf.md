@@ -25,7 +25,7 @@ draft: false
 - 1 tsp _kosher salt_
 - 1/2 tsp freshly ground _black pepper_
 - 1 1/2 cups _long-grain white rice_ (297g)
-- 3 cups _low-sodium chicken broth_ (711g), or _vegetable broth_
+- 3 cups _low-sodium chicken broth_ (711g) (or _vegetable broth_)
 - 1/4 cup fresh chopped _parsley_ (15g)
 
 ## Directions

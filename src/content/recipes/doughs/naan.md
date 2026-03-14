@@ -24,7 +24,7 @@ draft: false
 - ½ cup warm _water_ at 110°F
 - 1 tsp _sugar_
 - 1 tsp _rapid rise instant yeast_
-- 2 cups _all-purpose flour_ (or half _whole wheat flour_ – 9.25 oz total)
+- 2 cups (262g) _all-purpose flour_ (or half _whole wheat flour_)
 - 1 tsp _kosher salt_
 - 1 tbsp _oil_
 - ½ cup _plain yogurt_
@@ -44,7 +44,7 @@ draft: false
 
 1. Mix warm water, sugar, and yeast in a small cup. Stir gently, cover, and set aside 10 minutes until foamy.
 2. Combine flour, salt, and yogurt in a mixing bowl. Add the yeast mixture and mix until most flour is absorbed. Add a splash of water if too dry. Lightly oil one hand and knead into a smooth, soft ball.
-3. Brush bowl with oil, Proof 1-1.5 hours until doubled.
+3. Brush bowl with oil, proof 1-1.5 hours until doubled.
 4. Divide dough into 6 equal portions.
 5. On a lightly floured surface, roll each portion into an oval about 6-7 inches long and 4-5 inches wide.
 6. Heat a cast iron skillet over medium-high heat.

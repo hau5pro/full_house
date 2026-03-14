@@ -16,7 +16,7 @@ nutrition:
 
 ## Ingredients
 
-- 4 _haddock fillets_
+- 1.5 lb _haddock fillets_
 - 1 tbsp _olive oil_
 - 1/2 tsp _onion powder_
 - _salt_ and _black pepper_

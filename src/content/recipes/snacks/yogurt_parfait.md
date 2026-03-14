@@ -18,7 +18,7 @@ meta:
 - 1 small handful _berries_ (_strawberry_, _raspberry_, _blackberry_, _blueberry_)
 - 1 small handful _nuts_ (_walnuts_, _pecans_, _sunflower seeds_)
 - 1 tsp _dark chocolate chips_
-- 1 drizzle of honey
+- 1 drizzle of _honey_
 
 ## Directions
 

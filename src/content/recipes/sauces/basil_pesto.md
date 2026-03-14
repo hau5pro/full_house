@@ -18,7 +18,7 @@ nutrition:
 
 - 2 cups _fresh basil leaves_
 - 3 cloves _garlic_, peeled
-- 1/4 cup _pine nuts_ (or cashews)
+- 1/4 cup _pine nuts_ (or _cashews_)
 - 1/2 cup _parmesan_, freshly grated
 - 1/4 tsp _salt_
 - 1/4 tsp _black pepper_
