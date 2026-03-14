@@ -2,7 +2,7 @@
 title: "Naan"
 description: "Pillowy, buttery flatbread with a golden char from a screaming hot skillet."
 image: "opt-naan.webp"
-tags: ["indian", "vegetarian", "bread", "flatbread"]
+tags: ["indian", "vegetarian", "bread", "flatbread", "baking"]
 meta:
   prepTime: "15 min"
   fermentTime: "90 min"

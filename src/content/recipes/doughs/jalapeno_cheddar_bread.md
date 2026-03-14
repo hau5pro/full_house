@@ -2,7 +2,7 @@
 title: "Jalapeno Cheddar Dutch Oven Bread"
 description: "A crusty, no-knead loaf loaded with sharp cheddar and spicy jalapeños."
 image: "opt-jalapeno_cheddar_bread.webp"
-tags: ["vegetarian", "cheddar", "jalapeno", "bread", "dutch-oven", "no-knead"]
+tags: ["vegetarian", "cheddar", "jalapeno", "bread", "dutch-oven", "no-knead", "baking"]
 meta:
   prepTime: "10 min"
   cookTime: "50 min"
