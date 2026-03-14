@@ -44,7 +44,7 @@ draft: false
 
 1. Mix warm water, sugar, and yeast in a small cup. Stir gently, cover, and set aside 10 minutes until foamy.
 2. Combine flour, salt, and yogurt in a mixing bowl. Add the yeast mixture and mix until most flour is absorbed. Add a splash of water if too dry. Lightly oil one hand and knead into a smooth, soft ball.
-3. Brush bowl with oil, Proof 1-1.5 hour until doubled.
+3. Brush bowl with oil, Proof 1-1.5 hours until doubled.
 4. Divide dough into 6 equal portions.
 5. On a lightly floured surface, roll each portion into an oval about 6-7 inches long and 4-5 inches wide.
 6. Heat a cast iron skillet over medium-high heat.
