@@ -7,4 +7,3 @@
   - From frozen 350F for 16 min, cool 10 min
 
 - features:
-  - scaling option?

@@ -6,6 +6,7 @@ import TagChips from "../../components/TagChips.astro";
 import NutritionCard from "../../components/NutritionCard.astro";
 import Badge from "../../components/Badge.astro";
 import TotalTime from "../../components/TotalTime.astro";
+import ServingsStepper from "../../components/ServingsStepper.astro";
 import "../../styles/recipe.css";
 
 export async function getStaticPaths() {
@@ -38,7 +39,7 @@ const { Content } = await render(entry);
               entry.data.meta.servings && (
                 <div class="recipe-meta-item">
                   <span class="meta-label">Servings</span>
-                  <span class="meta-value">{entry.data.meta.servings}</span>
+                  <ServingsStepper servings={parseInt(entry.data.meta.servings)} />
                 </div>
               )
             }
@@ -65,4 +66,5 @@ const { Content } = await render(entry);
 
     {entry.data.nutrition && <div data-pagefind-ignore><NutritionCard {...entry.data.nutrition} /></div>}
   </div>
+  <script src="../../scripts/scale-recipe.ts"></script>
 </BaseLayout>

@@ -1,5 +1,7 @@
 export const UNCATEGORIZED = "Uncategorized";
 
+export const MAX_SCALE_MULTIPLIER = 4;
+
 export const CATEGORY_ORDER = [
   "mains",
   "sides",
