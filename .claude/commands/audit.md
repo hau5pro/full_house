@@ -22,6 +22,7 @@ Audit the recipe file at src/content/recipes/$ARGUMENTS against the CLAUDE.md co
 - Baking recipes (tagged `baking` or `bread`) should use gram weights for dry ingredients, either exclusively or alongside volume (e.g. `1 cup (120g) _flour_`)
 
 ## Directions
+- No italicized ingredient names — italics are for the ingredients list only, never in directions
 - Short and direct — no filler words or over-explanation
 - Each step is one clear action
 - No "your", "you should", "you want to", or similar padding

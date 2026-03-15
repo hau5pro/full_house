@@ -25,11 +25,11 @@ draft: false
 
 ## Directions
 
-1. Whisk together _flour_, _salt_, and _yeast_ in a large bowl. Add _water_, _milk_, and melted _butter_; stir with a spatula until a sticky, shaggy dough forms. Cover and rest 30–60 minutes.
+1. Whisk together flour, salt, and yeast in a large bowl. Add water, milk, and melted butter; stir with a spatula until a sticky, shaggy dough forms. Cover and rest 30–60 minutes.
 2. With a wet hand, stretch and fold the dough by grabbing an edge and pulling toward the center. Rotate and repeat until smooth and cohesive, about 4–6 folds around the bowl.
-3. Drizzle the dough with a little _olive oil_ and rub to coat. Cover and let rise at room temperature until doubled, 2–3 hours.
-4. Grease a 9×5-inch loaf pan with _softened butter_ or _olive oil_.
-5. Deflate the dough and turn out onto a lightly floured surface. Pat into a roughly 8×16-inch rectangle. Starting at one short end, roll into a tight coil and transfer to the pan. Rub the surface with 1 tsp _olive oil_.
+3. Drizzle the dough with a little olive oil and rub to coat. Cover and let rise at room temperature until doubled, 2–3 hours.
+4. Grease a 9×5-inch loaf pan with softened butter or olive oil.
+5. Deflate the dough and turn out onto a lightly floured surface. Pat into a roughly 8×16-inch rectangle. Starting at one short end, roll into a tight coil and transfer to the pan. Rub the surface with 1 tsp olive oil.
 6. Let rise until the dough crowns the rim, ~1 hour. When the dough approaches the rim, preheat oven to 375°F.
 7. Bake 45 minutes, until deep golden brown on top and the loaf sounds hollow when tapped.
 8. Turn out onto a cooling rack and cool completely before slicing.
