@@ -1,7 +1,7 @@
 ---
-title: "Sparkling Lemonade"
+title: "Lemonade"
 description: "Bright, bubbly, and barely sweet."
-image: "opt-sparkling_lemonade.webp"
+image: "opt-lemonade.webp"
 tags: ["lemon"]
 meta:
   prepTime: "10 min"
@@ -10,7 +10,7 @@ meta:
 
 ## Ingredients
 
-- 5 cups _sparkling water_
+- 5 cups _water_ (or _sparkling water_)
 - 4 _lemons_
 - 1/3 cup _agave_
 - 2 cups _ice_
