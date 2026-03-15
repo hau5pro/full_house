@@ -8,6 +8,7 @@ Audit the recipe file at src/content/recipes/$ARGUMENTS against the CLAUDE.md co
 - Don't use the category folder name as a tag (e.g. a recipe in `sides/` should not have a "side" or "sides" tag)
 - Tag order: cuisine/culture first (e.g. "thai", "greek"), then dietary (e.g. "vegetarian", "gluten-free"), then key ingredients (e.g. "tofu", "rice"), then everything else
 - meta times are realistic for the recipe
+- meta time values must use the format `"N hr"` or `"N min"` or `"N hr N min"` (e.g. `"10 hr"`, `"30 min"`, `"1 hr 30 min"`) — never spell out "hour/hours/minute/minutes", never use unicode or decimals for time
 - `servings` must be a single integer (e.g. `"4"`), not a range (e.g. `"4-6"`) — pick the most representative value
 - Never change the image field
 

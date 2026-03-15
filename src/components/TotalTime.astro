@@ -34,7 +34,7 @@ const totalFormatted = totalMinutes > 0 ? formatDuration(totalMinutes) : null;
         {timeParts.map((t) => (
           <div class="meta-time-row">
             <span class="meta-time-label">{t.label}</span>
-            <span class="meta-time-value">{t.value}</span>
+            <span class="meta-time-value">{formatDuration(parseMinutes(t.value))}</span>
           </div>
         ))}
       </div>
