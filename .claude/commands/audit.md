@@ -15,7 +15,7 @@ Audit the recipe file at src/content/recipes/$ARGUMENTS against the CLAUDE.md co
 - All lowercase
 - Ingredient names italicized with _underscores_ (not asterisks)
 - Substitute/optional ingredient names inside parentheses are also italicized (e.g. `(or _vegetable oil_)`, `(sub 1 cup jarred _salsa_)`)
-- Quantities use fractions where appropriate
+- Quantities use fractions where appropriate — write them as plain text (e.g. `1/2`, `3/4`, `1 1/2`), never unicode characters (e.g. `½`, `¾`) — a remark plugin handles the conversion at build time
 - Units abbreviated (tsp, tbsp, oz, lb, g, kg, ml, L, qt, gal)
 - Prep state must be declared in the ingredient line, not discovered mid-directions (e.g. `2 cloves _garlic_, minced` — not "mince the garlic" in step 1 with plain `2 cloves _garlic_` in the list)
 - Proteins and produce where quantity varies should use weight over count (e.g. `1.5 lb _chicken breast_` not `2 _chicken breasts_`)
