@@ -17,9 +17,9 @@ export const fractions: Record<string, string> = {
 };
 
 const pattern = new RegExp(
-  `(?<=^|\\s)(\\d+\\s+)?(${Object.keys(fractions)
+  `(?<=^|\\s|\\()(\\d+\\s+)?(${Object.keys(fractions)
     .map((k) => k.replace("/", "\\/"))
-    .join("|")})(?=\\s|$)`,
+    .join("|")})(?=\\s|$|\\))`,
   "g",
 );
 

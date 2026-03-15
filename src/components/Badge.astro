@@ -3,10 +3,11 @@ interface Props {
   icon: string;
   tooltip: string;
   color?: string;
+  pill?: boolean;
 }
 
-const { icon, tooltip, color } = Astro.props;
+const { icon, tooltip, color, pill } = Astro.props;
 ---
-<span class="icon-badge" style={color ? `--badge-color: ${color}` : undefined}>
+<span class={`icon-badge${pill ? " icon-badge--pill" : ""}`} style={color ? `--badge-color: ${color}` : undefined}>
   {icon}<span class="icon-badge-tooltip">{tooltip}</span>
 </span>

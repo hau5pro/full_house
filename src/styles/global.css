@@ -362,6 +362,15 @@ footer p::after {
   z-index: 1;
 }
 
+.icon-badge--pill {
+  width: auto;
+  border-radius: 9999px;
+  padding: 0 0.5em;
+  font-size: var(--text-xs);
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.02em;
+}
+
 .icon-badge-tooltip {
   position: absolute;
   top: calc(100% + var(--space-xs));

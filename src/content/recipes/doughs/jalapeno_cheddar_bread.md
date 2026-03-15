@@ -8,6 +8,7 @@ meta:
   cookTime: "50 min"
   fermentTime: "2 hr"
   servings: "8"
+  hydration: "113%"
 nutrition:
   servingSize: "1 serving"
   calories: 371

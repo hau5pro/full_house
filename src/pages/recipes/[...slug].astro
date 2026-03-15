@@ -40,6 +40,7 @@ const { Content } = await render(entry);
           <div class="recipe-img-wrapper">
             <img src={imageUrl} alt={entry.data.title} class={`recipe-img${entry.data.portraitImage ? "" : " landscape"}`} data-pagefind-meta="image[src]" transition:name={`recipe-img-${entry.id.replace(/\//g, "-")}`} transition:animate="fade" />
             {entry.data.meta?.authentic && <Badge icon="★" tooltip="Authentic recipe" />}
+            {entry.data.meta?.hydration && <Badge icon={`${entry.data.meta.hydration} hydration`} tooltip="Dough hydration" pill />}
           </div>
         )
       }

@@ -7,6 +7,7 @@ meta:
   prepTime: "20 min"
   fermentTime: "90 min"
   servings: "7"
+  hydration: "59%"
 nutrition:
   servingSize: "1 small ball (~163g)"
   calories: 393

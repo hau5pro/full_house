@@ -18,6 +18,7 @@ const recipes = defineCollection({
         marinadeTime: z.string().optional(),
         coolingTime: z.string().optional(),
         servings: z.string().optional(),
+        hydration: z.string().optional(),
         authentic: z.boolean().optional(),
       })
       .optional(),
