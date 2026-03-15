@@ -6,7 +6,7 @@ tags: ["baking", "american", "breakfast", "brioche", "cinnamon"]
 meta:
   prepTime: "30 min"
   cookTime: "30 min"
-  fermentTime: "2 hr + overnight"
+  fermentTime: "10 hr"
   servings: "9"
 source: "https://alexandracooks.com/2018/12/24/overnight-brioche-cinnamon-rolls-with-cream-cheese-frosting/print/54592/"
 draft: false
