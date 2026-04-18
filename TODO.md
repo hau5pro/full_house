@@ -7,3 +7,7 @@
   - From frozen 350F for 16 min, cool 10 min
 
 - features:
+
+bugs:
+
+- naan doesnt have hydration
