@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REMOTE="r2:cookbook"
+REMOTE="r2-fullhouse:cookbook"
 MEDIA_DIR="$(dirname "$0")/media"
 
 push() {
